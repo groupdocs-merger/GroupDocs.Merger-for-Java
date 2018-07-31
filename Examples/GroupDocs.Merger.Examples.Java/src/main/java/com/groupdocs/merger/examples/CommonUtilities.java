@@ -61,7 +61,7 @@ public class CommonUtilities {
 	}
 
 	public static void meteredLicense() {
-		// ExStart:applyLicenseFromFile
+		// ExStart:meteredLicense
 		try {
 			// Setup license
 			Metered metered = new Metered();
@@ -70,6 +70,6 @@ public class CommonUtilities {
 			System.out.println("Exception: " + exp.getMessage());
 			exp.printStackTrace();
 		}
-		// ExEnd:applyLicenseFromFile
+		// ExEnd:meteredLicense
 	}
 }
