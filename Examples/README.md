@@ -7,7 +7,7 @@ GroupDocs.Merger for Java is a back-end document manipulation API. It allows to 
 
 <p align="center">
 
-  <a title="Download complete GroupDocs.Merger for Java source code" href="ad.github.com/groupdocs-merger/GroupDocs.Merger-for-Java/zip/master">
+  <a title="Download complete GroupDocs.Merger for Java source code" href="https://github.com/groupdocs-merger/GroupDocs.Merger-for-Java/archive/master.zip">
 	<img src="https://raw.github.com/AsposeExamples/java-examples-dashboard/master/images/downloadZip-Button-Large.png" />
   </a>
 </p>
