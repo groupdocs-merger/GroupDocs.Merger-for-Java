@@ -9,14 +9,19 @@ import java.io.OutputStream;
 import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Stream;
 
 import com.groupdocs.merger.domain.JoinItem;
 import com.groupdocs.merger.domain.format.FileFormat;
 import com.groupdocs.merger.domain.options.MoveOptions;
+import com.groupdocs.merger.domain.options.OrientationMode;
+import com.groupdocs.merger.domain.options.OrientationOptions;
 import com.groupdocs.merger.domain.options.PagesOptions;
 import com.groupdocs.merger.domain.options.RangeMode;
 import com.groupdocs.merger.domain.options.RangeOptions;
+import com.groupdocs.merger.domain.options.RotateMode;
+import com.groupdocs.merger.domain.options.RotateOptions;
 import com.groupdocs.merger.domain.options.SwapOptions;
 import com.groupdocs.merger.domain.result.DocumentResult;
 import com.groupdocs.merger.domain.result.MultiDocumentResult;
@@ -38,7 +43,7 @@ public class DocsManipulation {
 		int pageNumber = 4;
 		int newPageNumber = 2;
 
-		MoveOptions pagesOptions = new MoveOptions(FileFormat.DOCX, password, pageNumber, newPageNumber);
+		MoveOptions pagesOptions = new MoveOptions(FileFormat.Docx, password, pageNumber, newPageNumber);
 		InputStream documentExample = new FileInputStream(sourceFile);
 
 		// Main method.
@@ -84,7 +89,7 @@ public class DocsManipulation {
 		String password = "SomePasswordString";
 		List<Integer> pages = new ArrayList<Integer>();
 		pages.add(2);
-		PagesOptions pagesOptions = new PagesOptions(FileFormat.XLSX, password, pages);
+		PagesOptions pagesOptions = new PagesOptions(FileFormat.Xlsx, password, pages);
 		InputStream documentExample = new FileInputStream(sourceFile);
 
 		// Main method.
@@ -129,10 +134,10 @@ public class DocsManipulation {
 		String password = "SomePasswordString";
 		int startPage = 2;
 		int endPage = 4;
-		int mode = RangeMode.ALL_PAGES;
+		int mode = RangeMode.AllPages;
 		RangeOptions rangeOptions = new RangeOptions(startPage, endPage, mode);
 		rangeOptions.setPassword(password);
-		rangeOptions.setFileFormat(FileFormat.DOCX);
+		rangeOptions.setFileFormat(FileFormat.Docx);
 		InputStream documentExample = new FileInputStream(sourceFile);
 
 		// Main method.
@@ -155,7 +160,7 @@ public class DocsManipulation {
 		// Preparing.
 		int startPage = 1;
 		int endPage = 5;
-		int mode = RangeMode.ALL_PAGES;
+		int mode = RangeMode.AllPages;
 		InputStream documentExample = new FileInputStream(sourceFile);
 
 		// Main method.
@@ -180,7 +185,7 @@ public class DocsManipulation {
 		List<Integer> pages = new ArrayList<Integer>();
 		pages.add(3);
 		pages.add(4);
-		PagesOptions pagesSplitOptions = new PagesOptions(FileFormat.PDF, password, pages);
+		PagesOptions pagesSplitOptions = new PagesOptions(FileFormat.Pdf, password, pages);
 		InputStream documentExample = new FileInputStream(sourceFile);
 
 		// Main method.
@@ -207,10 +212,10 @@ public class DocsManipulation {
 		String password = "SomePasswordString";
 		int startPage = 5;
 		int endPage = 8;
-		int mode = RangeMode.EVEN_PAGES;
+		int mode = RangeMode.EvenPages;
 		RangeOptions rangeOptions = new RangeOptions(startPage, endPage, mode);
 		rangeOptions.setPassword(password);
-		rangeOptions.setFileFormat(FileFormat.PDF);
+		rangeOptions.setFileFormat(FileFormat.Pdf);
 		InputStream documentExample = new FileInputStream(sourceFile);
 
 		// Main method.
@@ -236,7 +241,7 @@ public class DocsManipulation {
 		String password = "SomePasswordString";
 		int pageNumber1 = 3;
 		int pageNumber2 = 6;
-		SwapOptions pagesOptions = new SwapOptions(pageNumber2, pageNumber1, FileFormat.PDF, password);
+		SwapOptions pagesOptions = new SwapOptions(pageNumber2, pageNumber1, FileFormat.Pdf, password);
 		InputStream documentExample = new FileInputStream(sourceFile);
 		// Main method.
 		DocumentResult result = new DocumentHandler().swapPages(documentExample, pagesOptions);
@@ -284,7 +289,7 @@ public class DocsManipulation {
 		List<Integer> pages = new ArrayList<Integer>();
 		pages.add(pageNumber1);
 		pages.add(pageNumber2);
-		PagesOptions pagesOptions = new PagesOptions(FileFormat.PDF, password, pages);
+		PagesOptions pagesOptions = new PagesOptions(FileFormat.Pdf, password, pages);
 		InputStream documentExample = new FileInputStream(sourceFile);
 		// Main method.
 		DocumentResult result = new DocumentHandler().trim(documentExample, pagesOptions);
@@ -307,10 +312,10 @@ public class DocsManipulation {
 		String password = "setpassword123";
 		int startPage = 1;
 		int endPage = 5;
-		int mode = RangeMode.ALL_PAGES;
+		int mode = RangeMode.AllPages;
 		RangeOptions rangeOptions = new RangeOptions(startPage, endPage, mode);
 		rangeOptions.setPassword(password);
-		rangeOptions.setFileFormat(FileFormat.PDF);
+		rangeOptions.setFileFormat(FileFormat.Pdf);
 		InputStream documentExample = new FileInputStream(sourceFile);
 
 		// Main method.
@@ -337,9 +342,9 @@ public class DocsManipulation {
 		InputStream documentExample1 = new FileInputStream(sourceFile);
 		InputStream documentExample2 = new FileInputStream(sourceFile2);
 		List<JoinItem> documentStreams = new ArrayList<JoinItem>();
-		JoinItem item1 = new JoinItem(documentExample1, FileFormat.PDF, password);
+		JoinItem item1 = new JoinItem(documentExample1, FileFormat.Pdf, password);
 		documentStreams.add(item1);
-		JoinItem item2 = new JoinItem(documentExample2, FileFormat.PDF, password);
+		JoinItem item2 = new JoinItem(documentExample2, FileFormat.Pdf, password);
 		documentStreams.add(item2);
 
 		// Main method.
@@ -388,7 +393,7 @@ public class DocsManipulation {
 		InputStream documentExample = new FileInputStream(sourceFile);
 
 		// Check document of known format
-		boolean resultProtected = new DocumentHandler().isPasswordSet(documentExample, FileFormat.DOCX);
+		boolean resultProtected = new DocumentHandler().isPasswordSet(documentExample, FileFormat.Docx);
 		System.out.println("Document is protected: " + resultProtected);
 		//ExEnd:checkProtectionOfKnownFormatDoc
 	}
@@ -415,7 +420,7 @@ public class DocsManipulation {
 		String sourceFile = CommonUtilities.sourcePath + fileName;
 		// Preparing.
 		String password = "SomePasswordString";
-		RemovePasswordOptions options = new RemovePasswordOptions(FileFormat.DOCX, password);
+		RemovePasswordOptions options = new RemovePasswordOptions(FileFormat.Docx, password);
 		InputStream documentExample = new FileInputStream(sourceFile);
 		// Main method.
 		DocumentResult result = new DocumentHandler().removePassword(documentExample, options);
@@ -457,7 +462,7 @@ public class DocsManipulation {
 		String sourceFile = CommonUtilities.sourcePath + fileName;
 		// Preparing.
 		String password = "SomePasswordString";
-		AddPasswordOptions options = new AddPasswordOptions(FileFormat.DOCX, password);
+		AddPasswordOptions options = new AddPasswordOptions(FileFormat.Docx, password);
 		InputStream documentExample = new FileInputStream(sourceFile);
 
 		// Main method.
@@ -501,7 +506,7 @@ public class DocsManipulation {
 		// Preparing.
 		String currentPassword = "SomePasswordString";
 		String newPassword = "NewPasswordString";
-		UpdatePasswordOptions options = new UpdatePasswordOptions(FileFormat.DOCX, currentPassword, newPassword);
+		UpdatePasswordOptions options = new UpdatePasswordOptions(FileFormat.Docx, currentPassword, newPassword);
 		InputStream documentExample = new FileInputStream(sourceFile);
 		 
 		// Main method.
@@ -535,5 +540,89 @@ public class DocsManipulation {
 		fos.write(bytes, 0, bytes.length);
 		fos.close();
 		//ExEnd:updateProtectionForUnknownForamtDocs
+	}
+	
+	/*
+	 * Set Page Orientation For Password-Protected Document Of Known Format
+	 */
+	public static void setPageOrientationForPasswordProtectedKnownForamtDocs(String fileName) throws Throwable{
+		//ExStart:setPageOrientationForPasswordProtectedKnownForamtDocs
+		String sourceFile = CommonUtilities.sourcePath + fileName;
+		// Preparing.
+		String password = "SomePasswordString";
+		OrientationOptions pagesOptions = new OrientationOptions(OrientationMode.Landscape, FileFormat.Docx, password, new int[]{1,2});
+		InputStream documentExample = new FileInputStream(sourceFile); 
+		// Main method.
+		DocumentResult result = new DocumentHandler().changeOrientation(documentExample, pagesOptions);
+		OutputStream documentStream = result.getStream();
+		CommonUtilities.saveDocument((ByteArrayOutputStream)documentStream, fileName);
+		System.out.println(result.getFileFormat());
+		//ExEnd:setPageOrientationForPasswordProtectedKnownForamtDocs
+	}
+	
+	/*
+	 * Set Page Orientation For Document Of Unknown Format
+	 */
+	public static void setPageOrientationForUnknownForamtDocs(String fileName) throws Throwable{
+		//ExStart:setPageOrientationForUnknownForamtDocs
+		String sourceFile = CommonUtilities.sourcePath + fileName;
+		// Preparing.
+		InputStream documentExample = new FileInputStream(sourceFile);		  
+		// Main method.
+		DocumentResult result = new DocumentHandler().changeOrientation(documentExample, OrientationMode.Landscape, new int[]{1,6});
+		OutputStream documentStream = result.getStream();
+		CommonUtilities.saveDocument((ByteArrayOutputStream)documentStream, fileName);
+		System.out.println(result.getFileFormat());
+		//ExEnd:setPageOrientationForUnknownForamtDocs
+	}
+	
+	/*
+	 * Rotate pages on password-protected document of known format
+	 */
+	public static void rotatePagesOnPasswordProtectedKnownForamtDocs(String fileName) throws Throwable{
+		//ExStart:rotatePagesOnPasswordProtectedKnownForamtDocs
+		String sourceFile = CommonUtilities.sourcePath + fileName;
+		// Preparing.
+		String password = "SomePasswordString";
+		List<Integer> pageNumbersForRotation = new ArrayList<Integer>();
+		pageNumbersForRotation.add(3);
+		pageNumbersForRotation.add(6);  
+		RotateOptions pagesOptions = new RotateOptions(FileFormat.Docx, password, RotateMode.Rotate180, pageNumbersForRotation );
+		InputStream documentExample = new FileInputStream(sourceFile);
+		// Main method.
+		DocumentResult result = new DocumentHandler().rotatePages(documentExample, pagesOptions);
+		OutputStream documentStream = result.getStream();
+		CommonUtilities.saveDocument((ByteArrayOutputStream)documentStream, fileName);
+		System.out.print(result.getFileFormat()); 
+		//ExEnd:rotatePagesOnPasswordProtectedKnownForamtDocs
+	}
+	
+	/*
+	 * Rotate pages on document of Unknown format
+	 */
+	public static void rotatePagesOnUnknownForamtDocs(String fileName) throws Throwable{
+		//ExStart:rotatePagesOnUnknownForamtDocs
+		String sourceFile = CommonUtilities.sourcePath + fileName;
+		// Preparing.
+		InputStream documentExample = new FileInputStream(sourceFile);
+		  
+		// Main method.
+		DocumentResult result = new DocumentHandler().rotatePages(documentExample, RotateMode.Rotate270);
+		OutputStream documentStream = result.getStream();		
+		CommonUtilities.saveDocument((ByteArrayOutputStream)documentStream, fileName);
+		System.out.print(result.getFileFormat());
+		//ExEnd:rotatePagesOnUnknownForamtDocs
+	}
+	
+	/*
+	 * Get Supported Formats
+	 */
+	public static void getSupportedFormats() throws Throwable{
+		//ExStart:getSupportedFormats
+		Map<String, Long> documentFormatsContainer = new DocumentHandler().getSupportedFormats();
+		for (Map.Entry<String, Long>entry : documentFormatsContainer .entrySet()) {   
+			System.out.println("Key:"+entry.getKey()+", value:"+entry.getValue());		      
+		}
+		//ExEnd:getSupportedFormats
 	}
 }

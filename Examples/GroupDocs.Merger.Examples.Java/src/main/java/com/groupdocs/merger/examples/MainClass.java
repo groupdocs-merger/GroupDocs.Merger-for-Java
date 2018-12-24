@@ -3,7 +3,7 @@ package com.groupdocs.merger.examples;
 public class MainClass {
 
 	public static void main(String[] args) throws Throwable {
-		CommonUtilities.applyLicenseFromFile();
+		//CommonUtilities.applyLicenseFromFile();
 		//DocsManipulation.changePageOrderOfProtectedKnownFormatDoc("demo.docx");
 		//DocsManipulation.changePageOrderUnKnownFormatDoc("demo.pdf");
 		//DocsManipulation.removePagesFromProtectedKnownFormatDoc("sample.xlsx");
@@ -27,5 +27,10 @@ public class MainClass {
 		//DocsManipulation.updateProtectionForKnownForamtDocs("Output.docx");
 		//DocsManipulation.updateProtectionForUnknownForamtDocs("Output.docx");
 		//DocsManipulation.updateProtectionForUnknownForamtDocs("Output.docx");
+		//DocsManipulation.setPageOrientationForPasswordProtectedKnownForamtDocs("demo.docx");
+		//DocsManipulation.setPageOrientationForUnknownForamtDocs("demo.docx");
+		//DocsManipulation.rotatePagesOnPasswordProtectedKnownForamtDocs("demo.docx");
+		//DocsManipulation.rotatePagesOnUnknownForamtDocs("demo.docx");
+		//DocsManipulation.getSupportedFormats();
 	}
 }
