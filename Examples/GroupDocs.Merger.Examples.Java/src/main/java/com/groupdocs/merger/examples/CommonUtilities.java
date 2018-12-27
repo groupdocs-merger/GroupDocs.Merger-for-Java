@@ -1,6 +1,9 @@
 package com.groupdocs.merger.examples;
 
+import java.io.ByteArrayOutputStream;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.file.FileSystems;
@@ -17,7 +20,7 @@ public class CommonUtilities {
 	public final static String outputPath = "./Data/Output/";
 	public final static String publicKey = ""; // Your public license key
 	public final static String privateKey = ""; // Your private license key
-	public static final Path licensePath = getProjectBaseDir().resolve("GroupDocs.Total.Java.lic");
+	public static final String licensePath = "E://GroupDocs.Total.Java.lic";
 
 	public static Path getProjectBaseDir() {
 		Properties props = new Properties();
@@ -33,11 +36,9 @@ public class CommonUtilities {
 	public static void applyLicenseFromFile() {
 		// ExStart:applyLicenseFromFile
 		try {
-						String licPath = licensePath.toString();
 			// Setup license
 			License lic = new License();
-			lic.setLicense(licensePath.toString());
-			System.out.println(licensePath.toString());
+			lic.setLicense(licensePath);
 		} catch (Exception exp) {
 			System.out.println("Exception: " + exp.getMessage());
 			exp.printStackTrace();
@@ -71,5 +72,21 @@ public class CommonUtilities {
 			exp.printStackTrace();
 		}
 		// ExEnd:meteredLicense
+	}
+	
+	public static void saveDocument(ByteArrayOutputStream byteArrayStream, String fileName) {
+		// ExStart:saveDocument
+		byte[] bytes = byteArrayStream.toByteArray();
+		FileOutputStream fos;
+		try {
+			fos = new FileOutputStream(CommonUtilities.outputPath + fileName);
+			fos.write(bytes, 0, bytes.length);
+			fos.close();
+		}catch (FileNotFoundException e) {
+			System.out.println(e.getMessage());
+		}catch (IOException e) {
+			System.out.println(e.getMessage());
+		}
+		// ExEnd:saveDocument
 	}
 }
