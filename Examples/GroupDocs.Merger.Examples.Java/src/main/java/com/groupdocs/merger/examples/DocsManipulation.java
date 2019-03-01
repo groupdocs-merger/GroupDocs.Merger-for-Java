@@ -2,27 +2,25 @@ package com.groupdocs.merger.examples;
 
 import java.io.ByteArrayOutputStream;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.io.OutputStream;
-import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-import java.util.stream.Stream;
 
 import com.groupdocs.merger.domain.JoinItem;
 import com.groupdocs.merger.domain.format.FileFormat;
 import com.groupdocs.merger.domain.options.MoveOptions;
 import com.groupdocs.merger.domain.options.OrientationMode;
 import com.groupdocs.merger.domain.options.OrientationOptions;
-import com.groupdocs.merger.domain.options.PagesOptions;
 import com.groupdocs.merger.domain.options.RangeMode;
-import com.groupdocs.merger.domain.options.RangeOptions;
+import com.groupdocs.merger.domain.options.RemovePagesOptions;
 import com.groupdocs.merger.domain.options.RotateMode;
 import com.groupdocs.merger.domain.options.RotateOptions;
+import com.groupdocs.merger.domain.options.SplitOptions;
 import com.groupdocs.merger.domain.options.SwapOptions;
+import com.groupdocs.merger.domain.options.TrimOptions;
 import com.groupdocs.merger.domain.result.DocumentResult;
 import com.groupdocs.merger.domain.result.MultiDocumentResult;
 import com.groupdocs.merger.domain.security.AddPasswordOptions;
@@ -89,7 +87,7 @@ public class DocsManipulation {
 		String password = "SomePasswordString";
 		List<Integer> pages = new ArrayList<Integer>();
 		pages.add(2);
-		PagesOptions pagesOptions = new PagesOptions(FileFormat.Xlsx, password, pages);
+		RemovePagesOptions pagesOptions = new RemovePagesOptions(FileFormat.Xlsx, password, pages);
 		InputStream documentExample = new FileInputStream(sourceFile);
 
 		// Main method.
@@ -135,13 +133,11 @@ public class DocsManipulation {
 		int startPage = 2;
 		int endPage = 4;
 		int mode = RangeMode.AllPages;
-		RangeOptions rangeOptions = new RangeOptions(startPage, endPage, mode);
-		rangeOptions.setPassword(password);
-		rangeOptions.setFileFormat(FileFormat.Docx);
+		RemovePagesOptions removeOptions = new RemovePagesOptions(FileFormat.Docx,password,startPage, endPage, mode);
 		InputStream documentExample = new FileInputStream(sourceFile);
 
 		// Main method.
-		DocumentResult result = new DocumentHandler().removePages(documentExample, rangeOptions);
+		DocumentResult result = new DocumentHandler().removePages(documentExample, removeOptions);
 		OutputStream documentStream = result.getStream();
 		ByteArrayOutputStream byteArrayStream = (ByteArrayOutputStream) documentStream;
 		byte[] bytes = byteArrayStream.toByteArray();
@@ -185,7 +181,7 @@ public class DocsManipulation {
 		List<Integer> pages = new ArrayList<Integer>();
 		pages.add(3);
 		pages.add(4);
-		PagesOptions pagesSplitOptions = new PagesOptions(FileFormat.Pdf, password, pages);
+		SplitOptions pagesSplitOptions = new SplitOptions(FileFormat.Pdf, password, pages);
 		InputStream documentExample = new FileInputStream(sourceFile);
 
 		// Main method.
@@ -213,13 +209,11 @@ public class DocsManipulation {
 		int startPage = 5;
 		int endPage = 8;
 		int mode = RangeMode.EvenPages;
-		RangeOptions rangeOptions = new RangeOptions(startPage, endPage, mode);
-		rangeOptions.setPassword(password);
-		rangeOptions.setFileFormat(FileFormat.Pdf);
+		SplitOptions splitOptions = new SplitOptions(FileFormat.Pdf,password,startPage, endPage, mode);
 		InputStream documentExample = new FileInputStream(sourceFile);
 
 		// Main method.
-		MultiDocumentResult splitResult = new DocumentHandler().split(documentExample, rangeOptions);
+		MultiDocumentResult splitResult = new DocumentHandler().split(documentExample, splitOptions);
 		for (int i = 0; i < splitResult.getDocuments().size(); i++) {
 			OutputStream documentStream = splitResult.getDocuments().get(i).getStream();
 			ByteArrayOutputStream byteArrayStream = (ByteArrayOutputStream) documentStream;
@@ -289,10 +283,10 @@ public class DocsManipulation {
 		List<Integer> pages = new ArrayList<Integer>();
 		pages.add(pageNumber1);
 		pages.add(pageNumber2);
-		PagesOptions pagesOptions = new PagesOptions(FileFormat.Pdf, password, pages);
+		TrimOptions trimOptions = new TrimOptions(FileFormat.Pdf, password, pages);
 		InputStream documentExample = new FileInputStream(sourceFile);
 		// Main method.
-		DocumentResult result = new DocumentHandler().trim(documentExample, pagesOptions);
+		DocumentResult result = new DocumentHandler().trim(documentExample, trimOptions);
 		OutputStream documentStream = result.getStream();
 		ByteArrayOutputStream byteArrayStream = (ByteArrayOutputStream) documentStream;
 		byte[] bytes = byteArrayStream.toByteArray();
@@ -313,13 +307,11 @@ public class DocsManipulation {
 		int startPage = 1;
 		int endPage = 5;
 		int mode = RangeMode.AllPages;
-		RangeOptions rangeOptions = new RangeOptions(startPage, endPage, mode);
-		rangeOptions.setPassword(password);
-		rangeOptions.setFileFormat(FileFormat.Pdf);
+		TrimOptions trimOptions = new TrimOptions(FileFormat.Pdf,password,startPage, endPage, mode);
 		InputStream documentExample = new FileInputStream(sourceFile);
 
 		// Main method.
-		DocumentResult result = new DocumentHandler().trim(documentExample, rangeOptions);
+		DocumentResult result = new DocumentHandler().trim(documentExample, trimOptions);
 		OutputStream documentStream = result.getStream();
 
 		ByteArrayOutputStream byteArrayStream = (ByteArrayOutputStream) documentStream;
