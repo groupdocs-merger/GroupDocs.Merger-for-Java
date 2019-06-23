@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+import com.groupdocs.merger.domain.JoinItem;
 import com.groupdocs.merger.domain.format.FileFormat;
 import com.groupdocs.merger.domain.options.JoinOptions;
 import com.groupdocs.merger.domain.options.MoveOptions;
