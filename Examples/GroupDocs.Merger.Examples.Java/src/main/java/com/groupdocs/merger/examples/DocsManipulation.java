@@ -9,16 +9,16 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-import com.groupdocs.merger.domain.JoinItem;
 import com.groupdocs.merger.domain.format.FileFormat;
+import com.groupdocs.merger.domain.options.JoinOptions;
 import com.groupdocs.merger.domain.options.MoveOptions;
 import com.groupdocs.merger.domain.options.OrientationMode;
 import com.groupdocs.merger.domain.options.OrientationOptions;
+import com.groupdocs.merger.domain.options.PageSplitOptions;
 import com.groupdocs.merger.domain.options.RangeMode;
 import com.groupdocs.merger.domain.options.RemovePagesOptions;
 import com.groupdocs.merger.domain.options.RotateMode;
 import com.groupdocs.merger.domain.options.RotateOptions;
-import com.groupdocs.merger.domain.options.SplitOptions;
 import com.groupdocs.merger.domain.options.SwapOptions;
 import com.groupdocs.merger.domain.options.TrimOptions;
 import com.groupdocs.merger.domain.result.DocumentResult;
@@ -169,7 +169,7 @@ public class DocsManipulation {
 		fos.close();
 		//ExEnd:removePagesRangeFromUnknownFormatDoc
 	}
-
+	
 	/*
 	 * Splitting by page numbers to several one page documents 
 	 */
@@ -178,10 +178,11 @@ public class DocsManipulation {
 		String sourceFile = CommonUtilities.sourcePath + fileName;
 		// Preparing.
 		String password = "SomePasswordString";
-		List<Integer> pages = new ArrayList<Integer>();
-		pages.add(3);
-		pages.add(4);
-		SplitOptions pagesSplitOptions = new SplitOptions(FileFormat.Pdf, password, pages);
+		//List<Integer> pages = new ArrayList<Integer>();
+		//pages.add(3);
+		//pages.add(4);
+		int[] pages = {3,4};
+		PageSplitOptions pagesSplitOptions = new PageSplitOptions(FileFormat.Pdf, password, pages);
 		InputStream documentExample = new FileInputStream(sourceFile);
 
 		// Main method.
@@ -209,7 +210,7 @@ public class DocsManipulation {
 		int startPage = 5;
 		int endPage = 8;
 		int mode = RangeMode.EvenPages;
-		SplitOptions splitOptions = new SplitOptions(FileFormat.Pdf,password,startPage, endPage, mode);
+		PageSplitOptions splitOptions = new PageSplitOptions(FileFormat.Pdf,password,startPage, endPage, mode);
 		InputStream documentExample = new FileInputStream(sourceFile);
 
 		// Main method.
@@ -333,6 +334,7 @@ public class DocsManipulation {
 		String password = "SomePasswordString";
 		InputStream documentExample1 = new FileInputStream(sourceFile);
 		InputStream documentExample2 = new FileInputStream(sourceFile2);
+		
 		List<JoinItem> documentStreams = new ArrayList<JoinItem>();
 		JoinItem item1 = new JoinItem(documentExample1, FileFormat.Pdf, password);
 		documentStreams.add(item1);
@@ -347,6 +349,7 @@ public class DocsManipulation {
 		FileOutputStream fos = new FileOutputStream(CommonUtilities.outputPath + fileName);
 		fos.write(bytes, 0, bytes.length);
 		fos.close();
+		
 		//ExEnd:joinDocumentsOfKnownFormat
 	}
 
