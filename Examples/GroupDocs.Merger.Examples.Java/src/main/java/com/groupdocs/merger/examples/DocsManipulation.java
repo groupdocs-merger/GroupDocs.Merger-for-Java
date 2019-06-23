@@ -179,9 +179,7 @@ public class DocsManipulation {
 		String sourceFile = CommonUtilities.sourcePath + fileName;
 		// Preparing.
 		String password = "SomePasswordString";
-		//List<Integer> pages = new ArrayList<Integer>();
-		//pages.add(3);
-		//pages.add(4);
+		
 		int[] pages = {3,4};
 		PageSplitOptions pagesSplitOptions = new PageSplitOptions(FileFormat.Pdf, password, pages);
 		InputStream documentExample = new FileInputStream(sourceFile);
