@@ -32,6 +32,6 @@ public class MainClass {
 		//DocsManipulation.rotatePagesOnPasswordProtectedKnownForamtDocs("demo.docx");
 		//DocsManipulation.rotatePagesOnUnknownForamtDocs("demo.docx");
 		//DocsManipulation.getSupportedFormats();
-		//DocsManipulation.getImageRepresentationOfPages("sample.xlsx");
+		//DocsManipulation.getImageRepresentationOfDocument("sample.xlsx");
 	}
 }
