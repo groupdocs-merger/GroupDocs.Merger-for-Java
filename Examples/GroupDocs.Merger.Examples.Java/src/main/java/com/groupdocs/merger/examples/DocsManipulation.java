@@ -11,6 +11,8 @@ import java.util.Map;
 
 import com.groupdocs.merger.domain.JoinItem;
 import com.groupdocs.merger.domain.format.FileFormat;
+import com.groupdocs.merger.domain.image.PageImage;
+import com.groupdocs.merger.domain.options.ImageOptions;
 import com.groupdocs.merger.domain.options.JoinOptions;
 import com.groupdocs.merger.domain.options.MoveOptions;
 import com.groupdocs.merger.domain.options.OrientationMode;
@@ -618,5 +620,26 @@ public class DocsManipulation {
 			System.out.println("Key:"+entry.getKey()+", value:"+entry.getValue());		      
 		}
 		//ExEnd:getSupportedFormats
+	}
+	
+	/*
+	 * Get Image Representation of Document
+	 */
+	public static void getImageRepresentationOfDocument(String fileName) throws Throwable{
+		//ExStart:getImageRepresentationOfDocument
+		String sourceFile = CommonUtilities.sourcePath + fileName;
+		// Preparing.
+		String password = "";
+		List<Integer> pageNumbers = new ArrayList<Integer>();
+		pageNumbers.add(6);
+		pageNumbers.add(4);  
+		ImageOptions pagesOptions = new ImageOptions(pageNumbers, FileFormat.Xlsx, password);
+		InputStream documentExample = new FileInputStream(sourceFile);
+		
+		// Main method.        
+		List<PageImage> images = new DocumentHandler().getPagePreview(documentExample, pagesOptions);
+		PageImage page = images.get(1);
+		System.out.print(page.getPageNumber());
+		//ExEnd:getImageRepresentationOfDocument
 	}
 }
