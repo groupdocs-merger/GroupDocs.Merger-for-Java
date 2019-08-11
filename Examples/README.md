@@ -1,5 +1,5 @@
 
-## GroupDocs.Merger for Java Examples
+# GroupDocs.Merger for Java Examples
 
 This package contains Java Example Projects for GroupDocs.Merger for Java and sample input docucuments/templates.
 
@@ -12,9 +12,11 @@ GroupDocs.Merger for Java is a back-end document manipulation API. It allows to 
   </a>
 </p>
 
-## How to Run the Examples?
+# How to Run the Examples?
 
-It is assumed that maven is installed and configured in your system path. You can edit the project by opening in your favorite IDE like NetBeans, Eclipse, and IntelliJ IDEA.
+It is assumed that maven is installed and configured in your system path. You can edit the project by opening in your favorite IDE like NetBeans, Eclipse, and IntelliJ IDEA. Please visit our [documentation website](https://docs.groupdocs.com/display/mergerjava/How+to+Run+Examples) for more details.
+
+## Install and Configure Maven
 
 You may find following resources helpful:
 
