@@ -9,9 +9,12 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+import com.groupdocs.merger.domain.ImageJoinItem;
 import com.groupdocs.merger.domain.JoinItem;
+import com.groupdocs.merger.domain.Order;
 import com.groupdocs.merger.domain.format.FileFormat;
 import com.groupdocs.merger.domain.image.PageImage;
+import com.groupdocs.merger.domain.options.ImageJoinOptions;
 import com.groupdocs.merger.domain.options.ImageOptions;
 import com.groupdocs.merger.domain.options.JoinOptions;
 import com.groupdocs.merger.domain.options.MoveOptions;
@@ -641,5 +644,38 @@ public class DocsManipulation {
 		PageImage page = images.get(1);
 		System.out.print(page.getPageNumber());
 		//ExEnd:getImageRepresentationOfDocument
+	}
+	
+	/*
+	 * Join Multiiple Images
+	 */
+	public static void joinImagesOfKnownFormat(String fileName, String fileName2, String fileName3) throws Throwable{
+		//ExStart:joinImagesOfKnownFormat
+		long[] sourceFormatArray = {FileFormat.Tiff, FileFormat.Png, FileFormat.Bmp};
+		int[] rowNumberForElement = {1,2,2};
+		int[] columnNumberForElement = { 22, 23, 23 };
+		InputStream[] inputStreams = {new FileInputStream(CommonUtilities.sourcePath + fileName),
+				new FileInputStream(CommonUtilities.sourcePath + fileName2),
+				new FileInputStream(CommonUtilities.sourcePath + fileName3)};
+		int order = Order.JoinByRowsFirst;
+		  
+		// Preparing.
+		List<ImageJoinItem> imageItems = new ArrayList<ImageJoinItem>();
+		  
+		int i = 0;
+		for (Long sourceFileFormat : sourceFormatArray)
+		{           
+		    String title = String.format("%s:%s:%s-%s||", order, sourceFileFormat,rowNumberForElement[i],columnNumberForElement[i]);
+		    InputStream imageStream = inputStreams[i];
+		    ImageJoinItem imageJoinItem = new ImageJoinItem(imageStream, sourceFileFormat, rowNumberForElement[i], columnNumberForElement[i], 2);
+		    imageJoinItem.setIdentifyRow(title);
+		    imageItems.add(imageJoinItem);
+		    i++;
+		}
+		ImageJoinOptions options = new ImageJoinOptions(FileFormat.Png, order);
+		  
+		//ImageJoinItem result = new DocumentHandler().join(imageItems,options);
+		
+		//ExEnd:joinImagesOfKnownFormat
 	}
 }

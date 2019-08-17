@@ -1,15 +1,19 @@
 package com.groupdocs.merger.examples;
 
+import java.awt.event.ItemEvent;
 import java.io.ByteArrayOutputStream;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.file.FileSystems;
 import java.nio.file.Path;
+import java.util.Map;
 import java.util.Properties;
 
+import com.groupdocs.merger.domain.DocumentInfo;
+import com.groupdocs.merger.domain.format.FileFormat;
+import com.groupdocs.merger.handler.DocumentHandler;
 import com.groupdocs.merger.licensing.License;
 import com.groupdocs.merger.licensing.metered.Metered;
 
@@ -88,5 +92,32 @@ public class CommonUtilities {
 			System.out.println(e.getMessage());
 		}
 		// ExEnd:saveDocument
+	}
+	
+	public static void getSupportedFormats() throws Exception {
+		// ExStart:getSupportedFormats
+		DocumentHandler handler = new DocumentHandler();
+		Map<String, Long> documentFormatsContainer = handler.getSupportedFormats();
+		for(Map.Entry<String, Long> item : documentFormatsContainer.entrySet())
+		     System.out.println("Key:"+item.getKey()+"|Value:"+item.getValue());
+		// ExEnd:getSupportedFormats
+	}
+	
+	public static void getDocumentInformation(String fileName) throws Exception {
+		// ExStart:getDocumentInformation
+		DocumentHandler handler = new DocumentHandler();
+		String sourceFile = sourcePath + fileName;
+		String password = "somepassword";
+		InputStream fileStream = new FileInputStream(sourceFile);
+
+		// Get information about document
+		DocumentInfo resultInfo = handler.getDocumentInfo(fileStream);
+
+		// Get information about password protected document.
+		DocumentInfo docInfo = new DocumentHandler().getDocumentInfo(fileStream, password);
+
+		System.out.println("Size:"+resultInfo.getSize()+"|Pages:"+resultInfo.getPages());
+	
+		// ExEnd:getDocumentInformation
 	}
 }

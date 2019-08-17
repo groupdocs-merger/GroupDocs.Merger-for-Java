@@ -33,5 +33,6 @@ public class MainClass {
 		//DocsManipulation.rotatePagesOnUnknownForamtDocs("demo.docx");
 		//DocsManipulation.getSupportedFormats();
 		//DocsManipulation.getImageRepresentationOfDocument("sample.xlsx");
+		//DocsManipulation.joinImagesOfKnownFormat("sample.tiff", "sample2.png","sample3.bmp");
 	}
 }
