@@ -3,7 +3,6 @@ package com.groupdocs.merger.examples;
 import java.awt.event.ItemEvent;
 import java.io.ByteArrayOutputStream;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -15,7 +14,6 @@ import java.util.Properties;
 import com.groupdocs.merger.domain.DocumentInfo;
 import com.groupdocs.merger.domain.format.FileFormat;
 import com.groupdocs.merger.handler.DocumentHandler;
-import com.groupdocs.merger.internal.c.a.s.Collections.Generic.Dictionary;
 import com.groupdocs.merger.licensing.License;
 import com.groupdocs.merger.licensing.metered.Metered;
 
