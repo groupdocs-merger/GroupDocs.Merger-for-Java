@@ -1,0 +1,6 @@
+Examples\.idea
+Examples\target
+Examples\Resources\Output
+Examples\*.iml
+Examples/Output/
+Examples/target/
