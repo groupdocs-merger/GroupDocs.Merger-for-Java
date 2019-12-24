@@ -2,7 +2,8 @@
 
 This package contains [Examples](https://github.com/groupdocs-merger/GroupDocs.Merger-for-Java/tree/master/Examples) for [GroupDocs.Merger for Java](https://products.groupdocs.com/merger/java) that will help you understand API's working and write your own applications.
 
-GroupDocs.Merger for Java is a back-end document manipulation API. It allows to swap, remove or reorder pages in a document of supported format. It also manage documents password protection. You can remove or set password protection to any supported document. Furthermore, multiple files can be combined and arranged to a single document. 
+GroupDocs.Merger for Java allows you to merge documents and manipulate  document structure across wide range of supported document types - PDF, DOCX/DOC, PPTX/PPT, XLSX/XLS, VSDX/VSD, ODT, ODS, ODP, HTML, EPUB and many others.
+Merge several documents into one, split single document to multiple documents, reorder or replace document pages, change page orientation, manage document password and perform other manipulations with GroupDocs.Merger for Java API.  
 
 <p align="center">
 
