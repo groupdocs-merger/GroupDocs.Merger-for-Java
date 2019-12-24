@@ -15,7 +15,7 @@ Directory | Description
 --------- | -----------
 [Examples](https://github.com/groupdocs-merger/GroupDocs.Merger-for-Java/tree/master/Examples)  | Contains the package of all Java examples and sample files that will help you learn how to use product features.
 
-## How to Run the Examples
+## How to Run the Examples with IDE
 
 + You can either clone the repository using your favorite GitHub client or download the ZIP file from the above button.
 + Extract the contents of the ZIP file to any folder on your computer.
@@ -23,6 +23,12 @@ Directory | Description
 + On the first run, the dependencies will automatically be downloaded.
 + Open MainClass.java file, all the examples are called from here.
 + Uncomment the examples you want to run from within the project.
+
+## How to Run the Examples with command line
+
++ Open root directory of the project
++ Open local terminal window
++ Run command : mvn clean install exec:java -Dexec.mainClass="com.groupdocs.merger.examples.RunExamples"
 
 Please find more details for how to run the examples [here](https://docs.groupdocs.com/display/mergerjava/How+to+Run+Examples).
 
