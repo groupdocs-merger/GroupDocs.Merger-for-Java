@@ -16,6 +16,6 @@ public class CheckDocumentPasswordProtection {
         isPasswordSet = merger.isPasswordSet();
 
 
-        System.out.print("Source document password has password: " + isPasswordSet);
+        System.out.print("Source document password has password: "+isPasswordSet);
     }
 }

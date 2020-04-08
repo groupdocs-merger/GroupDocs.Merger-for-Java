@@ -15,7 +15,7 @@ public class ChangePageOrientation {
     public static void run() throws Exception
     {
         String filePath = Constants.SAMPLE_DOCX;
-        String filePathOut = new File(Constants.OutputPath, "ChangePageOrientation-" + Paths.get(filePath).getFileName().toString()).getPath();
+        String filePathOut = new File(Constants.OutputPath, "ChangePageOrientation-"+ Paths.get(filePath).getFileName().toString()).getPath();
 
         OrientationOptions orientationOptions = new OrientationOptions(OrientationMode.Landscape, new int[] { 3, 4 });
 

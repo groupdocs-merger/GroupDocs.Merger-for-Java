@@ -14,7 +14,7 @@ public class AddDocumentPassword {
     public static void run() throws Exception
     {
         String filePath = Constants.SAMPLE_PPTX;
-        String filePathOut = new File(Constants.OutputPath, "AddDocumentPassword-" + Paths.get(filePath).getFileName().toString()).getPath();
+        String filePathOut = new File(Constants.OutputPath, "AddDocumentPassword-"+ Paths.get(filePath).getFileName().toString()).getPath();
 
         AddPasswordOptions addOptions = new AddPasswordOptions(Constants.SAMPLE_PASSWORD);
 

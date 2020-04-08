@@ -8,7 +8,7 @@ import java.io.File;
 /**
  * This example demonstrates how to set license from file.
  *
- * The SetLicense method attempts to set a license from several locations relative to the executable and GroupDocs.Merger.dll.
+ * The SetLicense method attempts to set a license from several locations relative to the executable and GroupDocs.Merger.jar.
  * You can also use the additional overload to load a license from a stream, this is useful for instance when the
  * License is stored as an embedded resource.
  */
@@ -16,11 +16,12 @@ public class SetLicenseFromFile {
 
     public static void run()
     {
-        File file = new File(Constants.LicensePath);
+
+        File file = new File("E:\\Lisbon\\Java_products\\License_Unlimited\\Conholdate.Total.Product.Family.lic");
         if (file.exists() && !file.isDirectory())
         {
             License license = new License();
-            license.setLicense(Constants.LicensePath);
+            license.setLicense("E:\\Lisbon\\Java_products\\License_Unlimited\\Conholdate.Total.Product.Family.lic");
 
             System.out.print("License set successfully.");
         }

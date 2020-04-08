@@ -14,7 +14,7 @@ public class ExtractPagesByNumbers {
     public static void run() throws Exception
     {
         String filePath = Constants.SAMPLE_DOCX;
-        String filePathOut = new File(Constants.OutputPath, "ExtractPagesByNumbers-" + Paths.get(filePath).getFileName().toString()).getPath();
+        String filePathOut = new File(Constants.OutputPath, "ExtractPagesByNumbers-"+ Paths.get(filePath).getFileName().toString()).getPath();
 
         ExtractOptions extractOptions = new ExtractOptions(new int[] { 1, 4 }); // Resultant document will contain pages 1 and 4
 

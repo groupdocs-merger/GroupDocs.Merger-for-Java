@@ -15,7 +15,7 @@ public class ExtractPagesByRange {
     public static void run() throws Exception
     {
         String filePath = Constants.SAMPLE_DOCX;
-        String filePathOut = new File(Constants.OutputPath, "ExtractPagesByRange-" + Paths.get(filePath).getFileName().toString()).getPath();
+        String filePathOut = new File(Constants.OutputPath, "ExtractPagesByRange-"+ Paths.get(filePath).getFileName().toString()).getPath();
 
         ExtractOptions extractOptions = new ExtractOptions(1, 3, RangeMode.EvenPages); // Resultant document will contain page 2
 

@@ -14,7 +14,7 @@ public class JoinPagesFromVariousDocuments {
     public static void run() throws Exception
     {
         String filePath = Constants.SAMPLE_DOCX_2;
-        String filePathOut = new File(Constants.OutputPath, "JoinPagesFromVariousDocuments-" + Paths.get(filePath).getFileName().toString()).getPath();
+        String filePathOut = new File(Constants.OutputPath, "JoinPagesFromVariousDocuments-"+ Paths.get(filePath).getFileName().toString()).getPath();
 
         JoinOptions joinOptions = new JoinOptions(1, 2);
 

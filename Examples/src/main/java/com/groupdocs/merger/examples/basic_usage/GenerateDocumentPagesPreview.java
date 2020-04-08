@@ -1,16 +1,13 @@
 package com.groupdocs.merger.examples.basic_usage;
 
 import com.groupdocs.merger.Merger;
-import com.groupdocs.merger.domain.common.CreatePageStream;
-import com.groupdocs.merger.domain.common.ReleasePageStream;
+import com.groupdocs.merger.domain.common.PageStreamFactory;
 import com.groupdocs.merger.domain.options.PreviewMode;
 import com.groupdocs.merger.domain.options.PreviewOptions;
 import com.groupdocs.merger.domain.options.interfaces.IPreviewOptions;
 import com.groupdocs.merger.examples.Constants;
 import com.groupdocs.merger.exception.GroupDocsException;
-import com.groupdocs.merger.exceptions.GroupDocsMergerException;
 
-import java.io.File;
 import java.io.FileOutputStream;
 import java.io.OutputStream;
 
@@ -24,14 +21,14 @@ public class GenerateDocumentPagesPreview {
 
         Merger merger = new Merger(filePath);
 
-        IPreviewOptions previewOption = new PreviewOptions(new CreatePageStream() {
+        IPreviewOptions previewOption = new PreviewOptions(new PageStreamFactory() {
             @Override
-            public OutputStream invoke(int pageNumber) {
-                return createPageStream(pageNumber);
+            public OutputStream createPageStream(int pageNumber) {
+                return createStream(pageNumber);
             }
-        }, new ReleasePageStream() {
+
             @Override
-            public void invoke(int pageNumber, OutputStream pageStream) {
+            public void closePageStream(int pageNumber, OutputStream pageStream) {
                 releasePageStream(pageNumber, pageStream);
             }
         }, PreviewMode.JPEG);
@@ -41,10 +38,10 @@ public class GenerateDocumentPagesPreview {
 
     private static String getImagePath(int pageNumber)
     {
-        return Constants.OutputPath +"\\image-" + pageNumber+".jpg";
+        return Constants.OutputPath +"\\image-"+pageNumber+".jpg";
     }
 
-    private static OutputStream createPageStream(int pageNumber)
+    private static OutputStream createStream(int pageNumber)
     {
         try{
             String imageFilePath = getImagePath(pageNumber);
@@ -60,7 +57,7 @@ public class GenerateDocumentPagesPreview {
         try {
             pageStream.close();
             String imageFilePath = getImagePath(pageNumber);
-            System.out.print("Image file " + imageFilePath+" is ready for preview.");
+            System.out.print("Image file "+imageFilePath+" is ready for preview.");
         }catch (Exception e){
             throw new GroupDocsException(e.getMessage());
         }

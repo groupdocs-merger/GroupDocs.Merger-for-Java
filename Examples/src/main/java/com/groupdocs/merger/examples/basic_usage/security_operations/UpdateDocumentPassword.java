@@ -15,7 +15,7 @@ public class UpdateDocumentPassword {
     public static void run() throws Exception
     {
         String filePath = Constants.SAMPLE_XLSX_PROTECTED;
-        String filePathOut = new File(Constants.OutputPath, "UpdateDocumentPassword-" + Paths.get(filePath).getFileName().toString()).getPath();
+        String filePathOut = new File(Constants.OutputPath, "UpdateDocumentPassword-"+ Paths.get(filePath).getFileName().toString()).getPath();
 
         LoadOptions loadOptions = new LoadOptions(Constants.SAMPLE_PASSWORD);
         UpdatePasswordOptions updateOptions = new UpdatePasswordOptions(Constants.SAMPLE_PASSWORD + Constants.SAMPLE_PASSWORD);

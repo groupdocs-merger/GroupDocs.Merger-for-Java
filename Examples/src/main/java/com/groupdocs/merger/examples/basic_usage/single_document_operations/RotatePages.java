@@ -15,7 +15,7 @@ public class RotatePages {
     public static void run() throws Exception
     {
         String filePath = Constants.SAMPLE_PDF_2;
-        String filePathOut = new File(Constants.OutputPath, "RotatePages-" + Paths.get(filePath).getFileName().toString()).getPath();
+        String filePathOut = new File(Constants.OutputPath, "RotatePages-"+ Paths.get(filePath).getFileName().toString()).getPath();
 
         RotateOptions rotateOptions = new RotateOptions(RotateMode.Rotate180, new int[] { 2, 3 });
 

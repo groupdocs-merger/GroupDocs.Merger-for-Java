@@ -1,6 +1,7 @@
 package com.groupdocs.merger.examples.basic_usage;
 
 import com.groupdocs.merger.Merger;
+import com.groupdocs.merger.domain.FileType;
 import com.groupdocs.merger.domain.result.IDocumentInfo;
 import com.groupdocs.merger.examples.Constants;
 
@@ -12,7 +13,7 @@ import java.io.FileInputStream;
 public class GetDocumentInformation {
     public static void run() throws Exception
     {
-        
+
         Merger merger = new Merger(Constants.SAMPLE_VSDX);
 
         IDocumentInfo info = merger.getDocumentInfo();

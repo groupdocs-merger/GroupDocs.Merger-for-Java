@@ -32,75 +32,104 @@ public class RunExamples {
     public static void main(String[] args) throws Throwable
     {
         System.out.print("Open RunExamples.cs.");
-        System.out.print("Please uncomment the example that you want to run in the main() method.");
+        System.out.print("Please uncomment the example that you want to run in the Main() method.");
         System.out.print("=====================================================");
 
         //NOTE: Please uncomment the example that you want to run.
 
-        // Quick Start
+        //region Quick Start
 
         SetLicenseFromFile.run();
         //SetLicenseFromStream.run();
         //SetMeteredLicense.run();
-        HelloWorld.run();
 
-        // // Basic Usage
-        // // Get all supported file types
-        // GetSupportedFileTypes.run();
-        
-        // // Get info for the selected document
-        // GetDocumentInformation.run();
-        
-        // // Generate preview for the selected document
-        // GenerateDocumentPagesPreview.run();
-        
-        // // Join files
-        // JoinMultipleDocuments.run();
-        // JoinPagesFromVariousDocuments.run();
-        
-        // // Split document
-        // SplitToMultiPageDocuments.run();
-        // SplitToSinglePages.run();
-        // SplitToSinglePagesByRange.run();
-        // SplitToSinglePagesByRangeWithFilter.run();
-        
-        // // Split text file
-        // SplitToLineRanges.run();
-        // SplitToSeparateLines.run();
-        
-        // // Extract document pages
-        // ExtractPagesByNumbers.run();
-        // ExtractPagesByRange.run();
-        
-        // // Change orientation of the specific document pages
-        // ChangePageOrientation.run();
-        
-        // // Rotate document pages
-        // RotatePages.run();
-        
-        // // Swap document pages
-        // SwapPages.run();
-        
-        // // Remove document pages
-        // //RemovePages.run();
-        
-        // // Move page to a new position within document
-        // MovePage.run();
-        
-        // // Security - check, add, update, remove document password
-        // AddDocumentPassword.run();
-        // UpdateDocumentPassword.run();
-        // CheckDocumentPasswordProtection.run();
-        // RemoveDocumentPassword.run();
-        
-        // // Advanced Usage
-        // // Loading
-        // LoadDocumentFromLocalDisk.run();
-        // LoadDocumentFromStream.run();
-        // LoadDocumentFromUrl.run();
-        // LoadPasswordProtectedDocument.run();
-       
+        //HelloWorld.run();
+
+        //endregion // Quick Start
+
+        //region Basic Usage
+
+        //region Get all supported file types
+        //GetSupportedFileTypes.run();
+        //endregion
+
+        //region Get info for the selected document
+        //GetDocumentInformation.run();
+        //endregion
+
+        //region Generate preview for the selected document
+        //GenerateDocumentPagesPreview.run();
+        //endregion
+
+        //region Join files
+        //JoinMultipleDocuments.run();
+        //JoinPagesFromVariousDocuments.run();
+        //endregion
+
+        //region Split document
+        //SplitToMultiPageDocuments.run();
+        //SplitToSinglePages.getPagesStream();
+        //SplitToSinglePagesByRange.run();
+        //SplitToSinglePagesByRangeWithFilter.run();
+        //endregion
+
+        //region Split text file
+        //SplitToLineRanges.run();
+        //SplitToSeparateLines.run();
+        //endregion
+
+        //region Extract document pages
+        //ExtractPagesByNumbers.run();
+        //ExtractPagesByRange.run();
+        //endregion
+
+        //region Change orientation of the specific document pages
+        //ChangePageOrientation.run();
+        //endregion
+
+        //region Rotate document pages
+        //RotatePages.run();
+        //endregion
+
+        //region Swap document pages
+        //SwapPages.run();
+        //endregion
+
+        //region Remove document pages
+        //RemovePages.run();
+        //endregion
+
+        //region Move page to a new position within document
+        //MovePage.run();
+        //endregion
+
+        //region Security - check, add, update, remove document password
+
+        //AddDocumentPassword.run();
+        UpdateDocumentPassword.run();
+        //CheckDocumentPasswordProtection.run();
+        //RemoveDocumentPassword.run();
+
+        //endregion // Security
+
+        //endregion // Basic usage
+
+        //region Advanced Usage
+
+        //region Loading
+
+        //LoadDocumentFromLocalDisk.run();
+        //LoadDocumentFromStream.run();
+        //LoadDocumentFromUrl.run();
+        //LoadPasswordProtectedDocument.run();
+
+        //endregion // Loading
+
+        //endregion // Advanced Usage            
+
+
         System.out.print("=====================================================");
         System.out.print("All done.");
+
     }
 }

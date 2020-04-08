@@ -15,7 +15,6 @@ public class RemovePages {
     {
         String filePath = Constants.SAMPLE_DOCX_10_PAGES;
         String filePathOut = new File(Constants.OutputPath, "RemoveDocumentPage-"+ Paths.get(filePath).getFileName().toString()).getPath();
-
         RemoveOptions removeOptions = new RemoveOptions(new int[] { 3, 5 });
 
         Merger merger = new Merger(filePath);

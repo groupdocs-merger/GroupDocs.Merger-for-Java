@@ -14,7 +14,7 @@ public class SwapPages {
     public static void run() throws Exception
     {
         String filePath = Constants.SAMPLE_PPTX;
-        String filePathOut = new File(Constants.OutputPath, "SwapPages-" + Paths.get(filePath).getFileName().toString()).getPath();
+        String filePathOut = new File(Constants.OutputPath, "SwapPages-"+ Paths.get(filePath).getFileName().toString()).getPath();
 
         int pageNumber1 = 3;
         int pageNumber2 = 6;

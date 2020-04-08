@@ -14,7 +14,7 @@ public class RemoveDocumentPassword {
     public static void run() throws Exception
     {
         String filePath = Constants.SAMPLE_DOCX_PROTECTED;
-        String filePathOut = new File(Constants.OutputPath, "RemoveDocumentPassword-" + Paths.get(filePath).getFileName().toString()).getPath();
+        String filePathOut = new File(Constants.OutputPath, "RemoveDocumentPassword-"+ Paths.get(filePath).getFileName().toString()).getPath();
 
         LoadOptions loadOptions = new LoadOptions(Constants.SAMPLE_PASSWORD);
 

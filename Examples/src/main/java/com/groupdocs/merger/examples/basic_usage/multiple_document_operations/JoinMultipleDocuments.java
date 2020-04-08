@@ -13,7 +13,7 @@ public class JoinMultipleDocuments {
     public static void run() throws Exception
     {
         String filePath = Constants.SAMPLE_DOCX_2;
-        String filePathOut = new File(Constants.OutputPath, "JoinMultipleDocuments-" + Paths.get(filePath).getFileName().toString()).getPath();
+        String filePathOut = new File(Constants.OutputPath, "JoinMultipleDocuments-"+ Paths.get(filePath).getFileName().toString()).getPath();
 
         Merger merger = new Merger(filePath);
 

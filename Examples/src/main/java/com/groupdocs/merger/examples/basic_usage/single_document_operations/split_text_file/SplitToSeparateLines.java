@@ -14,7 +14,7 @@ public class SplitToSeparateLines {
     public static void run() throws Exception
     {
         String filePath = Constants.SAMPLE_TXT;
-        String filePathOut = new File(Constants.OutputPath, "SplitToSeparateLines-" + Paths.get(filePath).getFileName().toString()).getPath();
+        String filePathOut = new File(Constants.OutputPath, "SplitToSeparateLines-"+ Paths.get(filePath).getFileName().toString()).getPath();
 
         TextSplitOptions splitOptions = new TextSplitOptions(filePathOut, new int[] { 3, 6 });
 

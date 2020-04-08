@@ -14,8 +14,7 @@ import java.net.URL;
 public class LoadDocumentFromUrl {
     public static void run() throws Exception
     {
-         String url = "https://github.com/groupdocs-merger/GroupDocs.Merger-for-Java/blob/master/Examples/Resources/SampleFiles/Pdf/sample.pdf?raw=true";        
-
+         String url = "https://github.com/groupdocs-merger/GroupDocs.Merger-for-.NET/blob/master/Examples/Resources/SampleFiles/Pdf/sample.pdf?raw=true";
          try {
              InputStream stream = new URL(url).openStream();
 
@@ -25,5 +24,7 @@ public class LoadDocumentFromUrl {
          } catch ( Exception e){
              throw new GroupDocsMergerException(e.getMessage());
          }
+
     }
+
 }

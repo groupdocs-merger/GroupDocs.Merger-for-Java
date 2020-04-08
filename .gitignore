@@ -1,6 +1,5 @@
 Examples\.idea
 Examples\target
+Examples\Output
 Examples\Resources\Output
 Examples\*.iml
-Examples/Output/
-Examples/target/

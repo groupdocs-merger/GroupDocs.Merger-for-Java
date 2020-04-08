@@ -15,7 +15,7 @@ public class SplitToLineRanges {
     public static void run() throws Exception
     {
         String filePath = Constants.SAMPLE_TXT;
-        String filePathOut = new File(Constants.OutputPath, "SplitToLineRanges-" + Paths.get(filePath).getFileName().toString()).getPath();
+        String filePathOut = new File(Constants.OutputPath, "SplitToLineRanges-"+ Paths.get(filePath).getFileName().toString()).getPath();
 
         TextSplitOptions splitOptions = new TextSplitOptions(filePathOut, TextSplitMode.Interval, new int[] { 3, 6 });
 

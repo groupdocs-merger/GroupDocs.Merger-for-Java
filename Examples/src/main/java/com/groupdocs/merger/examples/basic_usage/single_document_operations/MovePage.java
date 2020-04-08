@@ -14,7 +14,7 @@ public class MovePage {
     public static void run() throws Exception
     {
         String filePath = Constants.SAMPLE_XLSX;
-        String filePathOut = new File(Constants.OutputPath, "MoveDocumentPage-" + Paths.get(filePath).getFileName().toString()).getPath();
+        String filePathOut = new File(Constants.OutputPath, "MoveDocumentPage-"+ Paths.get(filePath).getFileName().toString()).getPath();
 
         int pageNumber = 6;
         int newPageNumber = 1;
@@ -27,6 +27,6 @@ public class MovePage {
 
 
         System.out.print("Source document page was moved successfully.");
-        System.out.print("Check output " + filePathOut + ".");
+        System.out.print("Check output "+filePathOut+".");
     }
 }
