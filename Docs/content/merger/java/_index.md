@@ -8,12 +8,13 @@ keywords:
 productName: GroupDocs.Merger for Java
 hideChildren: True
 ---
-{{< alert style="info" >}}Welcome to the GroupDocs.Merger for JavaGroupDocs.Merger for Java allows trimming and swapping of pages. It also manages document protection. Moreover, API allows to merge two documents of same format into single.{{< /alert >}}
+{{< alert style="info" >}}
+![](merger/java/images/home.png) **Welcome to the GroupDocs.Merger for Java**  
+GroupDocs.Merger for Java allows trimming and swapping of pages. It also manages document protection. Moreover, API allows to merge two documents of same format into single. 
+{{< /alert >}}
 
 ## GroupDocs.Merger for Java Resources
-
 Following are the links to some useful resources you may need to accomplish your tasks.
-
 *   [GroupDocs.Merger for Java Online Documentation]({{< ref "merger/java" >}})
 *   [GroupDocs.Merger for Java Features]({{< ref "merger/java/getting-started/features-overview.md" >}})
 *   [GroupDocs.Merger for Java Limitations]({{< ref "merger/java/getting-started/evaluation-limitations-and-licensing-of-groupdocs.merger.md" >}})

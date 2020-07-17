@@ -46,7 +46,9 @@ license.setLicense(fileStream);
 {{< alert style="info" >}}Calling License.setLicense multiple times is not harmful but simply wastes processor time. Call License.setLicense in your startup code, before using GroupDocs.Merger classes. Do not call License.setLicense from within Page_Load methods since it means the license will be loaded every time a web page is loaded.{{< /alert >}}
 
 #### Setting Metered License
-{{< alert style="info" >}}You can also set Metered license as an alternative to license file. It is a new licensing mechanism that will be used along with existing licensing method. It is useful for the customers who want to be billed based on the usage of the API features. For more details, please refer to Metered Licensing FAQ section.{{< /alert >}}
+{{< alert style="info" >}}
+You can also set [Metered](https://apireference.groupdocs.com/java/merger/com.groupdocs.merger.licensing.metered/Metered) license as an alternative to license file. It is a new licensing mechanism that will be used along with existing licensing method. It is useful for the customers who want to be billed based on the usage of the API features. For more details, please refer to [Metered Licensing FAQ](https://purchase.groupdocs.com/faqs/licensing/metered) section.
+{{< /alert >}}
 
 Here are the simple steps to use the `Metered` class.
 

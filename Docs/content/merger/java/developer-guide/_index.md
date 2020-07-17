@@ -8,4 +8,6 @@ keywords: GroupDocs.Merger Developer Guide, GroupDocs.Merger Java Developer Guid
 productName: GroupDocs.Merger for Java
 hideChildren: False
 ---
-{{< alert style="info" >}}This section describes some basic and advanced use cases of GroupDocs.Merger for Java. Please refer to GitHub repository for more examples and samples.{{< /alert >}}
+{{< alert style="info" >}}
+This section describes some basic and advanced use cases of GroupDocs.Merger for Java. Please refer to [GitHub repository](https://github.com/groupdocs-merger/GroupDocs.Merger-for-Java) for more examples and samples.
+{{< /alert >}}
