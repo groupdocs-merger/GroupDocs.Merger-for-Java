@@ -1,6 +1,6 @@
 ---
 id: groupdocs-merger-for-java-20-11-release-notes
-url: merger/net/groupdocs-merger-for-java-20-11-release-notes
+url: merger/java/groupdocs-merger-for-java-20-11-release-notes
 title: GroupDocs.Merger for Java 20.11 Release Notes
 weight: 10
 description: ""
