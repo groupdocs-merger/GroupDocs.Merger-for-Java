@@ -2,7 +2,7 @@
 id: groupdocs-merger-for-java-20-4-release-notes
 url: merger/java/groupdocs-merger-for-java-20-4-release-notes
 title: GroupDocs.Merger for Java 20.4 Release Notes
-weight: 20
+weight: 30
 description: ""
 keywords: 
 productName: GroupDocs.Merger for Java
