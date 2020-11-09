@@ -5,6 +5,9 @@ import java.nio.file.Paths;
 
 
 public class Constants {
+
+    public static boolean IsLicensed = false;
+
     public static String LicensePath = "C:/licenses/GroupDocs.Merger.lic";
 
   
@@ -65,6 +68,8 @@ public class Constants {
     getSampleFilePath("Note/sample.one");
 
     // Images
+    public static String SAMPLE_EMF =
+    getSampleFilePath("Image/sample.emf");
     public static String SAMPLE_PNG =
     getSampleFilePath("Image/example1.png");
     public static String SAMPLE_BMP =
@@ -73,6 +78,7 @@ public class Constants {
     getSampleFilePath("Image/example3.tiff");
 
     private static String getSampleFilePath(String filePath) {
+        String test = SamplesPath;
         return new File(SamplesPath, filePath).getPath();
     }
 

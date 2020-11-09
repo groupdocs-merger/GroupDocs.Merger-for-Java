@@ -21,8 +21,10 @@ public class SetLicenseFromFile {
         if (file.exists() && !file.isDirectory())
         {
             License license = new License();
+
             license.setLicense("E:\\Lisbon\\Java_products\\License_Unlimited\\Conholdate.Total.Product.Family.lic");
 
+            //boolean test = license.isValidLicense();
             System.out.print("License set successfully.");
         }
         else

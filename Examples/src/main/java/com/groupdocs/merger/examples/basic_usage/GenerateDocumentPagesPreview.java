@@ -1,13 +1,16 @@
 package com.groupdocs.merger.examples.basic_usage;
 
+
 import com.groupdocs.merger.Merger;
 import com.groupdocs.merger.domain.common.PageStreamFactory;
 import com.groupdocs.merger.domain.options.PreviewMode;
 import com.groupdocs.merger.domain.options.PreviewOptions;
 import com.groupdocs.merger.domain.options.interfaces.IPreviewOptions;
 import com.groupdocs.merger.examples.Constants;
-import com.groupdocs.merger.exception.GroupDocsException;
+//import com.groupdocs.merger.exception.GroupDocsException;
+import com.groupdocs.merger.exceptions.GroupDocsMergerException;
 
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.OutputStream;
 
@@ -21,7 +24,7 @@ public class GenerateDocumentPagesPreview {
 
         Merger merger = new Merger(filePath);
 
-        IPreviewOptions previewOption = new PreviewOptions(new PageStreamFactory() {
+        IPreviewOptions previewOption = new PreviewOptions(new PageStreamFactory()  {
             @Override
             public OutputStream createPageStream(int pageNumber) {
                 return createStream(pageNumber);
@@ -46,8 +49,9 @@ public class GenerateDocumentPagesPreview {
         try{
             String imageFilePath = getImagePath(pageNumber);
             return new FileOutputStream(imageFilePath);
-        }catch (Exception e){
-            throw new GroupDocsException(e.getMessage());
+        }catch (FileNotFoundException e){
+            System.out.print(e.getMessage());
+            return null;
         }
 
     }
@@ -59,7 +63,7 @@ public class GenerateDocumentPagesPreview {
             String imageFilePath = getImagePath(pageNumber);
             System.out.print("Image file "+imageFilePath+" is ready for preview.");
         }catch (Exception e){
-            throw new GroupDocsException(e.getMessage());
+            System.out.print(e.getMessage());
         }
     }
 }
