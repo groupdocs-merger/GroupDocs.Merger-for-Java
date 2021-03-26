@@ -17,14 +17,13 @@ public class SetLicenseFromFile {
     public static void run()
     {
 
-        File file = new File("E:\\Lisbon\\Java_products\\License_Unlimited\\Conholdate.Total.Product.Family.lic");
+        File file = new File(Constants.LicensePath);
         if (file.exists() && !file.isDirectory())
         {
             License license = new License();
 
-            license.setLicense("E:\\Lisbon\\Java_products\\License_Unlimited\\Conholdate.Total.Product.Family.lic");
-
-            //boolean test = license.isValidLicense();
+            license.setLicense(Constants.LicensePath);
+            
             System.out.print("License set successfully.");
         }
         else
