@@ -48,7 +48,7 @@ There are a few fixed bugs in this regular monthly release. The most notable are
 
 **[Join](https://apireference.groupdocs.com/merger/java/com.groupdocs.merger/Merger#join(java.io.InputStream) )** and **[Split](https://apireference.groupdocs.com/merger/java/com.groupdocs.merger/Merger#split(com.groupdocs.merger.domain.options.interfaces.ISplitOptions) )** method of the GroupDocs.Merger for Java product was expanded, please refer to the following documentation articles for more details: 
 
-*   [Supported Document Types]({{< ref "merger/net/getting-started/supported-document-formats.md" >}});
+*   [Supported Document Types]({{< ref "merger/java/getting-started/supported-document-formats.md" >}});
 *   [Merge documents to PDF]({{< ref "merger/java/developer-guide/basic-usage/merge-files/merge-documents-to-pdf.md" >}});
 *   [Merge documents to DOC]({{< ref "merger/java/developer-guide/basic-usage/merge-files/merge-documents-to-doc.md" >}});
 *   [Split document]({{< ref "merger/java/developer-guide/basic-usage/single-document-operations/split-document.md" >}}).
