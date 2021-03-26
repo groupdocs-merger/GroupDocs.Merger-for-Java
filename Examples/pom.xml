@@ -7,7 +7,7 @@
 		<dependency>
 			<groupId>com.groupdocs</groupId>
 				<artifactId>groupdocs-merger</artifactId>
-				<version>20.11</version>
+				<version>21.3</version>
 		</dependency>
         <dependency>
             <groupId>com.microsoft.azure</groupId>

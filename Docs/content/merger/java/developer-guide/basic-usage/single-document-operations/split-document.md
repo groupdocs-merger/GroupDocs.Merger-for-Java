@@ -10,14 +10,17 @@ hideChildren: False
 ---
 [**GroupDocs.Merger**](https://products.groupdocs.com/merger/java) allows to split source document into several resultant documents. Document splitting can be performed in different ways by specifying page numbers array or start/end page numbers and setting different [PageSplitOptions](https://apireference.groupdocs.com/java/merger/com.groupdocs.merger.domain.options/PageSplitOptions) modes.  
 Here are the possible use cases:
+
 1.  **Page numbers array** specified and splitting mode is set to [PageSplitMode.Pages](https://apireference.groupdocs.com/java/merger/com.groupdocs.merger.domain.options/PageSplitMode#Pages) - specified page numbers indicate exact page numbers, which will be saved to the separate one-page documents.  
     *Ex:* Array{ 3, 6, 8 } will produce 3 documents with 3rd, 6th and 8th pages.    
+	
 2.  **Page numbers array** specified and splitting mode is set to [PageSplitMode.Interval](https://apireference.groupdocs.com/java/merger/com.groupdocs.merger.domain.options/PageSplitMode#Interval) - specified page numbers indicate the boundaries of the page intervals, which will be saved to the separate multi-page documents.  
     *Ex:* Array{ 3, 6, 8 } will produce 4 page intervals 1-2, 3-5, 6-7, 8-10.  
 
 There is also an ability to set parameter [RangeMode](https://apireference.groupdocs.com/java/merger/com.groupdocs.merger.domain.options/RangeMode) and obtain only even or odd pages from desired pages range.  
   
 The steps to split document to multiple on-page documents are the following:
+
 *   Initialize [PageSplitOptions](https://apireference.groupdocs.com/java/merger/com.groupdocs.merger.domain.options/PageSplitOptions) class with output files path format;
 *   Instantiate [Merger](https://apireference.groupdocs.com/java/merger/com.groupdocs.merger/Merger) object with source document path or InputStream;
 *   Call [split](https://apireference.groupdocs.com/java/merger/com.groupdocs.merger/Merger#split(com.groupdocs.merger.domain.options.interfaces.IPageSplitOptions)) method and pass [PageSplitOptions](https://apireference.groupdocs.com/java/merger/com.groupdocs.merger.domain.options/PageSplitOptions) object to itfor saving resultant documents.
