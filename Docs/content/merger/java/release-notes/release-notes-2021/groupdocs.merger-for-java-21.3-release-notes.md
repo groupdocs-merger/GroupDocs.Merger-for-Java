@@ -14,28 +14,29 @@ hideChildren: False
 
 There are a few fixed bugs in this regular monthly release. The most notable are:
 
-*   Big size of the MTHML merged document;
-*   Parsing of table 'GPOS' has failed.
+*   Impemented text .err format for splitting;
+*   Impemented text .err format for joining.
 *   Cross-format merging to DOC / DOCX;
 *   Cross-format merging to XPS;
 *   Split page number is not correct.
-*   Impemented text .err format for splitting;
-*   Impemented text .err format for joining.
+*   Big size of the MTHML merged document;
 *   Cannot access a closed Stream;
 *   Object reference not set to an instance of an object.
+*   Parsing of table 'GPOS' has failed.
+
 
 ## Full List of Issues Covering all Changes in this Release
 
 | Key | Summary | Category |
 | --- | --- | --- |
+| MERGERNET-517 | Impement text .err format for splitting | Feature |
+| MERGERNET-534 | Impement text .err format for joining | Feature |
 | MERGERNET-828 | Cross-format merging to DOC / DOCX | Feature |
 | MERGERNET-966 | Cross-format merging to XPS | Feature |
 | MERGERNET-967 | Split page number is not correct | Bug |
-| MERGERNET-517 | Impement text .err format for splitting | Feature |
-| MERGERNET-534 | Impement text .err format for joining | Feature |
+| MERGERNET-987 | Big size of the merged document | Bug |
 | MERGERNET-1009 | Cannot access a closed Stream | Bug |
 | MERGERNET-1010 | Object reference not set to an instance of an object | Bug |
-| MERGERNET-987 | Big size of the merged document | Bug |
 | MERGERNET-1032 | Parsing of table 'GPOS' has failed | Bug |
 
 
