@@ -10,7 +10,7 @@
 
 Directory | Description
 --------- | -----------
-[Docs](https://github.com/groupdocs-merger/GroupDocs.Merger-for-Java/tree/master/Docs)  | Product documentation containing the Developer's Guide, Release Notes and more.
+[Docs](https://github.com/groupdocs-merger/GroupDocs.Merger-for-Docs)  | Product documentation containing the Developer's Guide, Release Notes and more.
 [Examples](https://github.com/groupdocs-merger/GroupDocs.Merger-for-Java/tree/master/Examples)  | Java examples and sample documents for you to get started quickly. 
 
 ## Merge or Split Documents via Java
