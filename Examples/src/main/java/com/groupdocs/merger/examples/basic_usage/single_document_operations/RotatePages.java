@@ -17,7 +17,7 @@ public class RotatePages {
         String filePath = Constants.SAMPLE_PDF_2;
         String filePathOut = new File(Constants.OutputPath, "RotatePages-"+ Paths.get(filePath).getFileName().toString()).getPath();
 
-        RotateOptions rotateOptions = new RotateOptions(RotateMode.Rotate180, new int[] { 2, 3 });
+        RotateOptions rotateOptions = new RotateOptions(RotateMode.Rotate180, new int[] { 1 });
 
         Merger merger = new Merger(filePath);
         merger.rotatePages(rotateOptions);
