@@ -13,6 +13,7 @@ import com.groupdocs.merger.examples.basic_usage.multiple_document_operations.Cr
 import com.groupdocs.merger.examples.basic_usage.multiple_document_operations.CrossJoinPagesFromVariousDocuments;
 import com.groupdocs.merger.examples.basic_usage.multiple_document_operations.JoinMultipleDocuments;
 import com.groupdocs.merger.examples.basic_usage.multiple_document_operations.JoinPagesFromVariousDocuments;
+import com.groupdocs.merger.examples.basic_usage.multiple_document_operations.merge.*;
 import com.groupdocs.merger.examples.basic_usage.security_operations.AddDocumentPassword;
 import com.groupdocs.merger.examples.basic_usage.security_operations.CheckDocumentPasswordProtection;
 import com.groupdocs.merger.examples.basic_usage.security_operations.RemoveDocumentPassword;
@@ -77,6 +78,54 @@ public class RunExamples {
         //JoinMultipleDocuments.run();
         //JoinPagesFromVariousDocuments.run();
         //endregion
+		
+		 //region Merge files
+            //MergeCsv.run();
+            //MergeDoc.run();
+            //MergeDocm.run();
+            //MergeDocx.run();
+            //MergeDot.run();
+            //MergeDotm.run();
+            //MergeDotx.run();
+            //MergeEpub.run();
+            //MergeHtml.run();
+            //MergeMht.run();
+            //MergeMhtml.run();
+            //MergeOdp.run();
+            //MergeOds.run();
+            //MergeOdt.run();
+            //MergeOne.run();
+            //MergeOtp.run();
+            //MergeOtt.run();
+            //MergePdf.run();
+            //MergePps.run();
+            //MergePpsx.run();
+            //MergePpt.run();
+            //MergePptx.run();
+            //MergePng.run();
+            //MergeRtf.run();
+            //MergeTex.run();
+            //MergeTsv.run();
+            //MergeTxt.run();
+            //MergeVdx.run();
+            //MergeVsdm.run();
+            //MergeVsdx.run();
+            //MergeVssm.run();
+            //MergeVssx.run();
+            //MergeVstm.run();
+            //MergeVstx.run();
+            //MergeVsx.run();
+            //MergeVtx.run();
+            //MergeXlam.run();
+            //MergeXls.run();
+            //MergeXlsb.run();
+            //MergeXlsm.run();
+            //MergeXlsx.run();
+            //MergeXlt.run();
+            //MergeXltm.run();
+            //MergeXltx.run();
+            //MergeXps.run();
+         //endregion
 
         //region Cross-Join files
         if (Constants.IsLicensed)

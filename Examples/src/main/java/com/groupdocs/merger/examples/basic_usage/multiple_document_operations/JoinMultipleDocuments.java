@@ -1,6 +1,8 @@
 package com.groupdocs.merger.examples.basic_usage.multiple_document_operations;
 
 import com.groupdocs.merger.Merger;
+import com.groupdocs.merger.domain.options.WordJoinMode;
+import com.groupdocs.merger.domain.options.WordJoinOptions;
 import com.groupdocs.merger.examples.Constants;
 
 import java.io.File;
@@ -16,7 +18,6 @@ public class JoinMultipleDocuments {
         String filePathOut = new File(Constants.OutputPath, "JoinMultipleDocuments-"+ Paths.get(filePath).getFileName().toString()).getPath();
 
         Merger merger = new Merger(filePath);
-
         merger.join(Constants.SAMPLE_DOCX_3);
         merger.join(Constants.SAMPLE_DOCX_4);
         merger.save(filePathOut);

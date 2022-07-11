@@ -7,7 +7,7 @@
 		<dependency>
 			<groupId>com.groupdocs</groupId>
 				<artifactId>groupdocs-merger</artifactId>
-				<version>22.2</version>
+				<version>22.7</version>
 		</dependency>
         <dependency>
             <groupId>com.microsoft.azure</groupId>
@@ -17,7 +17,7 @@
         <dependency>
             <groupId>commons-io</groupId>
             <artifactId>commons-io</artifactId>
-            <version>2.7</version>
+            <version>2.5</version>
         </dependency>
         <dependency>
             <groupId>com.google.code.gson</groupId>
@@ -36,11 +36,9 @@
         </dependency>
 	</dependencies>
 	<repositories>
-		<repository>
-			<id>GroupDocs Artifact Repository</id>
-        		<name>GroupDocs Artifact Repository</name>
-        		<url>https://repository.groupdocs.com/repo/</url>
-		</repository>
+		<id>GroupDocs Artifact Repository</id>
+        <name>GroupDocs Artifact Repository</name>
+        <url>https://repository.groupdocs.com/repo/</url>
 	</repositories>
   <build>
     <plugins>
@@ -49,8 +47,8 @@
         <version>2.0.2</version>
         <configuration>
             <compilerArgument>-XDignore.symbol.file</compilerArgument>
-          <source>1.7</source>
-          <target>1.7</target>
+          <source>1.8</source>
+          <target>1.8</target>
         </configuration>
       </plugin>
     </plugins>
