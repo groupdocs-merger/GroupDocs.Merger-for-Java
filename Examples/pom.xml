@@ -7,7 +7,7 @@
 		<dependency>
 			<groupId>com.groupdocs</groupId>
 				<artifactId>groupdocs-merger</artifactId>
-				<version>22.7</version>
+				<version>22.12</version>
 		</dependency>
         <dependency>
             <groupId>com.microsoft.azure</groupId>
@@ -36,9 +36,16 @@
         </dependency>
 	</dependencies>
 	<repositories>
-		<id>GroupDocs Artifact Repository</id>
-        <name>GroupDocs Artifact Repository</name>
-        <url>https://repository.groupdocs.com/repo/</url>
+        <repository>
+            <id>GroupDocs Artifact Repository</id>
+            <name>GroupDocs Artifact Repository</name>
+            <url>https://releases.groupdocs.com/java/repo/</url>
+        </repository>
+        <repository>
+            <id>maven-central</id>
+            <name>maven-central</name>
+            <url>https://repo1.maven.org/maven2</url>
+        </repository>
 	</repositories>
   <build>
     <plugins>

@@ -103,8 +103,10 @@ public class RunExamples {
             //MergePpt.run();
             //MergePptx.run();
             //MergePng.run();
+            //MergeBmp.run();
+            //MergeTif.run();
+            //MergeTiff.run();
             //MergeRtf.run();
-            //MergeTex.run();
             //MergeTsv.run();
             //MergeTxt.run();
             //MergeVdx.run();
@@ -145,7 +147,7 @@ public class RunExamples {
         //region Split text file
         //SplitToLineRanges.run();
         //SplitToSeparateLines.run();
-       //endregion
+        //endregion
 
         //region Extract document pages
         //ExtractPagesByNumbers.run();
