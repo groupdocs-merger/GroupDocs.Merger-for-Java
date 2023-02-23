@@ -9,10 +9,7 @@ import com.groupdocs.merger.examples.advanced_usage.loading.loading_documents_fr
 import com.groupdocs.merger.examples.basic_usage.GenerateDocumentPagesPreview;
 import com.groupdocs.merger.examples.basic_usage.GetDocumentInformation;
 import com.groupdocs.merger.examples.basic_usage.GetSupportedFileTypes;
-import com.groupdocs.merger.examples.basic_usage.multiple_document_operations.CrossJoinMultipleDocuments;
-import com.groupdocs.merger.examples.basic_usage.multiple_document_operations.CrossJoinPagesFromVariousDocuments;
-import com.groupdocs.merger.examples.basic_usage.multiple_document_operations.JoinMultipleDocuments;
-import com.groupdocs.merger.examples.basic_usage.multiple_document_operations.JoinPagesFromVariousDocuments;
+import com.groupdocs.merger.examples.basic_usage.multiple_document_operations.*;
 import com.groupdocs.merger.examples.basic_usage.multiple_document_operations.merge.*;
 import com.groupdocs.merger.examples.basic_usage.security_operations.AddDocumentPassword;
 import com.groupdocs.merger.examples.basic_usage.security_operations.CheckDocumentPasswordProtection;
@@ -132,8 +129,9 @@ public class RunExamples {
         //region Cross-Join files
         if (Constants.IsLicensed)
         {
-            CrossJoinMultipleDocuments.run();
-            CrossJoinPagesFromVariousDocuments.run();
+            //CrossJoinMultipleDocuments.run();
+            CrossJoinMultipleImages.run();
+            //CrossJoinPagesFromVariousDocuments.run();
         }
         //endregion
 

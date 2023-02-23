@@ -23,7 +23,7 @@ public class SetLicenseFromFile {
             License license = new License();
 
             license.setLicense(Constants.LicensePath);
-            
+            Constants.IsLicensed = true;
             System.out.print("License set successfully.");
         }
         else

@@ -8,7 +8,7 @@ public class Constants {
 
     public static boolean IsLicensed = false;
 
-    public static String LicensePath = "c:\\License\\GroupDocs.Merger.Java.lic";
+    public static String LicensePath = "E:\\GroupDocs.Merger.Java.lic";
 
   
     public static String SamplesPath = (System.getProperty("user.dir") + "\\Resources\\SampleFiles\\");
@@ -78,6 +78,8 @@ public class Constants {
             getSampleFilePath("Image/sample4.tif");
     public static String SAMPLE_TIFF =
     getSampleFilePath("Image/sample3.tiff");
+    public static String SAMPLE_JPG =
+            getSampleFilePath("Image/sample5.jpg");
 
     private static String getSampleFilePath(String filePath) {
         String test = SamplesPath;
