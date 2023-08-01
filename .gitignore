@@ -1,8 +1,8 @@
-Examples\.idea
-Examples\target
-Examples\Output
-Examples\Resources\Output
-Examples\*.iml
+/Examples/.idea
+/Examples/target
+/Examples/Output
+/Examples/Resources/Output
+/Examples/*.iml
 deploy_key
 /.vs
 *.lic

@@ -41,7 +41,7 @@ public class GenerateDocumentPagesPreview {
 
     private static String getImagePath(int pageNumber)
     {
-        return Constants.OutputPath +"\\image-"+pageNumber+".jpg";
+        return Constants.OutputPath +"image-"+pageNumber+".jpg";
     }
 
     private static OutputStream createStream(int pageNumber)

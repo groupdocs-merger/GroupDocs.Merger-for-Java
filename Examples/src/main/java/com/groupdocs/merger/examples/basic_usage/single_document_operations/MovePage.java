@@ -16,7 +16,7 @@ public class MovePage {
         String filePath = Constants.SAMPLE_XLSX;
         String filePathOut = new File(Constants.OutputPath, "MoveDocumentPage-"+ Paths.get(filePath).getFileName().toString()).getPath();
 
-        int pageNumber = 6;
+        int pageNumber = 5;
         int newPageNumber = 1;
         MoveOptions moveOptions = new MoveOptions(pageNumber, newPageNumber);
 

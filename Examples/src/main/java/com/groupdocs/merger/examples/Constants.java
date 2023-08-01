@@ -8,7 +8,7 @@ public class Constants {
 
     public static boolean IsLicensed = false;
 
-    public static String LicensePath = "E:\\GroupDocs.Merger.Java.lic";
+    public static String LicensePath = "C:\\GroupDocs.Merger.Java.lic";
 
   
     public static String SamplesPath = (System.getProperty("user.dir") + "\\Resources\\SampleFiles\\");
@@ -78,6 +78,10 @@ public class Constants {
             getSampleFilePath("Image/sample4.tif");
     public static String SAMPLE_TIFF =
     getSampleFilePath("Image/sample3.tiff");
+    public static String SAMPLE_SVG =
+            getSampleFilePath("Image/sample_SVG.svg");
+    public static String SAMPLE_SVGZ =
+            getSampleFilePath("Image/sample_SVGZ.svgz");
     public static String SAMPLE_JPG =
             getSampleFilePath("Image/sample5.jpg");
 
@@ -254,4 +258,8 @@ public class Constants {
     // XPS
     public static String SAMPLE_XPS = getSampleFilePath("PageDescriptionLanguage/sample.xps");
     public static String SAMPLE_XPS_2 = getSampleFilePath("PageDescriptionLanguage/sample.xps");
+
+    // ARCHIVE
+    public static String SAMPLE_ZIP = getSampleFilePath("Archive/sample.zip");
+    public static String SAMPLE_TAR = getSampleFilePath("Archive/sample.tar");
 }

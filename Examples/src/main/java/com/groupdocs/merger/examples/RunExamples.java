@@ -103,6 +103,8 @@ public class RunExamples {
             //MergeBmp.run();
             //MergeTif.run();
             //MergeTiff.run();
+            //MergeSvg.run();
+            //MergeSvgz.run();
             //MergeRtf.run();
             //MergeTsv.run();
             //MergeTxt.run();
@@ -124,13 +126,15 @@ public class RunExamples {
             //MergeXltm.run();
             //MergeXltx.run();
             //MergeXps.run();
+            //MergeZip.run();
+            //MergeTar.run();
          //endregion
 
         //region Cross-Join files
         if (Constants.IsLicensed)
         {
             //CrossJoinMultipleDocuments.run();
-            CrossJoinMultipleImages.run();
+            //CrossJoinMultipleImages.run();
             //CrossJoinPagesFromVariousDocuments.run();
         }
         //endregion
