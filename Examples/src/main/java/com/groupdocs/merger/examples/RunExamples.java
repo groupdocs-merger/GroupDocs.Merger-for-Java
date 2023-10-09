@@ -136,6 +136,7 @@ public class RunExamples {
             //CrossJoinMultipleDocuments.run();
             //CrossJoinMultipleImages.run();
             //CrossJoinPagesFromVariousDocuments.run();
+            //CrossJoinImagesToPdf.run();
         }
         //endregion
 
