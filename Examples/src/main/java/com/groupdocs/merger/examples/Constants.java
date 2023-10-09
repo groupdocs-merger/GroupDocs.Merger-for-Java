@@ -8,7 +8,7 @@ public class Constants {
 
     public static boolean IsLicensed = false;
 
-    public static String LicensePath = "E:\\Lisbon\\Java\\License_Unlimited\\Conholdate.Total.Product.Family.lic";
+    public static String LicensePath = "C:\\GroupDocs.Merger.Java.lic";
 
   
     public static String SamplesPath = (System.getProperty("user.dir") + "\\Resources\\SampleFiles\\");
