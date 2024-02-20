@@ -17,8 +17,6 @@ public class JoinPagesUsingPageBuilder {
 
         Merger merger = new Merger(filePath);
         {
-            PageBuilderOptions pageBuilderOptions = new PageBuilderOptions();
-            pageBuilderOptions.setLoadDocumentInfo(false);
             merger.join(Constants.SAMPLE_PDF_2);
 
             PageBuilder pageBuilder = merger.createPageBuilder();
