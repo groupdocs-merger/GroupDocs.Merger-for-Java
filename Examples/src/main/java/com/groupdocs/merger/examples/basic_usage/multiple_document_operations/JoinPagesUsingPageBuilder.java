@@ -21,8 +21,7 @@ public class JoinPagesUsingPageBuilder {
             pageBuilderOptions.setLoadDocumentInfo(false);
             merger.join(Constants.SAMPLE_PDF_2);
 
-            PageBuilder pageBuilder = merger.createPageBuilder(null);
-            pageBuilder.addPage(pageBuilder.getDocuments().get(0).getIndex(), 1);
+            PageBuilder pageBuilder = merger.createPageBuilder();
             pageBuilder.addPage(pageBuilder.getDocuments().get(1).getPages()[0]); // Add 1 page of the second document
             pageBuilder.addPage(pageBuilder.getDocuments().get(0).getPages()[1]); // Add 2 page of the first document
             pageBuilder.addPage(pageBuilder.getDocuments().get(1).getPages()[1]); // Add 2 page of the second document
