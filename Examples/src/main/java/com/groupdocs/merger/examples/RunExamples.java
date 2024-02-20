@@ -74,6 +74,7 @@ public class RunExamples {
         //region Join files
         //JoinMultipleDocuments.run();
         //JoinPagesFromVariousDocuments.run();
+        //JoinPagesUsingPageBuilder.run();
         //endregion
 		
 		 //region Merge files
@@ -128,6 +129,7 @@ public class RunExamples {
             //MergeXps.run();
             //MergeZip.run();
             //MergeTar.run();
+            //MergeWav.run();
          //endregion
 
         //region Cross-Join files

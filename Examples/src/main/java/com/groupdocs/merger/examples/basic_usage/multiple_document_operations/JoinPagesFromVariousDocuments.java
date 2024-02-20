@@ -2,6 +2,7 @@ package com.groupdocs.merger.examples.basic_usage.multiple_document_operations;
 
 import com.groupdocs.merger.Merger;
 import com.groupdocs.merger.domain.options.JoinOptions;
+import com.groupdocs.merger.domain.options.PageJoinOptions;
 import com.groupdocs.merger.examples.Constants;
 
 import java.io.File;
@@ -16,7 +17,7 @@ public class JoinPagesFromVariousDocuments {
         String filePath = Constants.SAMPLE_DOCX_2;
         String filePathOut = new File(Constants.OutputPath, "JoinPagesFromVariousDocuments-"+ Paths.get(filePath).getFileName().toString()).getPath();
 
-        JoinOptions joinOptions = new JoinOptions(1, 2);
+        PageJoinOptions joinOptions = new PageJoinOptions(1, 2);
 
         Merger merger = new Merger(filePath);
         merger.join(Constants.SAMPLE_DOCX, joinOptions);
