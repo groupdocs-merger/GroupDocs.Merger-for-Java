@@ -20,7 +20,7 @@ import java.nio.file.Paths;
             String filePath = Constants.SAMPLE_PNG;
             String filePathOut = new File(Constants.OutputPath, "CrossJoinMultipleDocuments-" + Paths.get(filePath).getFileName().toString()).getPath();
 
-            IImageJoinOptions imageJoinOptions = new ImageJoinOptions(ImageJoinMode.Vertical);
+            ImageJoinOptions imageJoinOptions = new ImageJoinOptions(ImageJoinMode.Vertical);
 
             Merger merger = new Merger(filePath);
             {

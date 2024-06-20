@@ -70,6 +70,8 @@ public class Constants {
     // Images
     public static String SAMPLE_EMF =
     getSampleFilePath("Image/sample.emf");
+    public static String SAMPLE_EMZ =
+            getSampleFilePath("Image/sample.emz");
     public static String SAMPLE_PNG =
     getSampleFilePath("Image/sample1.png");
     public static String SAMPLE_BMP =

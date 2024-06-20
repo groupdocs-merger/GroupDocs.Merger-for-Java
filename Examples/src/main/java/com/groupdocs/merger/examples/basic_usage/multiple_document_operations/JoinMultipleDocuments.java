@@ -1,5 +1,6 @@
 package com.groupdocs.merger.examples.basic_usage.multiple_document_operations;
 
+
 import com.groupdocs.merger.Merger;
 import com.groupdocs.merger.domain.options.WordJoinMode;
 import com.groupdocs.merger.domain.options.WordJoinOptions;
@@ -14,6 +15,8 @@ import java.nio.file.Paths;
 public class JoinMultipleDocuments {
     public static void run() throws Exception
     {
+
+
         String filePath = Constants.SAMPLE_DOCX_2;
         String filePathOut = new File(Constants.OutputPath, "JoinMultipleDocuments-"+ Paths.get(filePath).getFileName().toString()).getPath();
 

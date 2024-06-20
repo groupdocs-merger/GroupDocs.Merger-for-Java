@@ -11,6 +11,8 @@ import com.groupdocs.merger.examples.basic_usage.GetDocumentInformation;
 import com.groupdocs.merger.examples.basic_usage.GetSupportedFileTypes;
 import com.groupdocs.merger.examples.basic_usage.multiple_document_operations.*;
 import com.groupdocs.merger.examples.basic_usage.multiple_document_operations.merge.*;
+import com.groupdocs.merger.examples.basic_usage.multiple_document_operations.merge.word.MergeWordDocumentsWithPredefinedComplianceMode;
+import com.groupdocs.merger.examples.basic_usage.multiple_document_operations.merge.word.MergeWordDocumentsWithoutStartingFromNewPage;
 import com.groupdocs.merger.examples.basic_usage.security_operations.AddDocumentPassword;
 import com.groupdocs.merger.examples.basic_usage.security_operations.CheckDocumentPasswordProtection;
 import com.groupdocs.merger.examples.basic_usage.security_operations.RemoveDocumentPassword;
@@ -52,84 +54,89 @@ public class RunExamples {
         //region Basic Usage
 
         //region Import Documents
-        //ImportDocumentToPdf.run();
-        //ImportDocumentToWordProcessing.run();
-        //ImportDocumentToSpreadsheet.run();
-        //ImportDocumentToPresentation.run();
-        //ImportDocumentToDiagram.run();
+        ImportDocumentToPdf.run();
+        ImportDocumentToWordProcessing.run();
+        ImportDocumentToSpreadsheet.run();
+        ImportDocumentToPresentation.run();
+        ImportDocumentToDiagram.run();
         //endregion
 
         //region Get all supported file types
-        //GetSupportedFileTypes.run();
+        GetSupportedFileTypes.run();
         //endregion
 
         //region Get info for the selected document
-        //GetDocumentInformation.run();
+        GetDocumentInformation.run();
         //endregion
 
         //region Generate preview for the selected document
-        //GenerateDocumentPagesPreview.run();
+        GenerateDocumentPagesPreview.run();
         //endregion
 
         //region Join files
-        //JoinMultipleDocuments.run();
-        //JoinPagesFromVariousDocuments.run();
-        //JoinPagesUsingPageBuilder.run();
+        JoinMultipleDocuments.run();
+        JoinPagesFromVariousDocuments.run();
+        JoinPagesUsingPageBuilder.run();
         //endregion
 		
 		 //region Merge files
-            //MergeCsv.run();
-            //MergeDoc.run();
-            //MergeDocm.run();
-            //MergeDocx.run();
-            //MergeDot.run();
-            //MergeDotm.run();
-            //MergeDotx.run();
-            //MergeEpub.run();
-            //MergeHtml.run();
-            //MergeMht.run();
-            //MergeMhtml.run();
-            //MergeOdp.run();
-            //MergeOds.run();
-            //MergeOdt.run();
-            //MergeOne.run();
-            //MergeOtp.run();
-            //MergeOtt.run();
-            //MergePdf.run();
-            //MergePps.run();
-            //MergePpsx.run();
-            //MergePpt.run();
-            //MergePptx.run();
-            //MergePng.run();
-            //MergeBmp.run();
-            //MergeTif.run();
-            //MergeTiff.run();
-            //MergeSvg.run();
-            //MergeSvgz.run();
-            //MergeRtf.run();
-            //MergeTsv.run();
-            //MergeTxt.run();
-            //MergeVdx.run();
-            //MergeVsdm.run();
-            //MergeVsdx.run();
-            //MergeVssm.run();
-            //MergeVssx.run();
-            //MergeVstm.run();
-            //MergeVstx.run();
-            //MergeVsx.run();
-            //MergeVtx.run();
-            //MergeXlam.run();
-            //MergeXls.run();
-            //MergeXlsb.run();
-            //MergeXlsm.run();
-            //MergeXlsx.run();
-            //MergeXlt.run();
-            //MergeXltm.run();
-            //MergeXltx.run();
-            //MergeXps.run();
-            //MergeZip.run();
-            //MergeTar.run();
-            //MergeWav.run();
+            MergeCsv.run();
+            MergeDoc.run();
+            MergeDocm.run();
+            MergeDocx.run();
+            MergeDot.run();
+            MergeDotm.run();
+            MergeDotx.run();
+            MergeEpub.run();
+            MergeHtml.run();
+            MergeMht.run();
+            MergeMhtml.run();
+            MergeOdp.run();
+            MergeOds.run();
+            MergeOdt.run();
+            MergeOne.run();
+            MergeOtp.run();
+            MergeOtt.run();
+            MergePdf.run();
+            MergePps.run();
+            MergePpsx.run();
+            MergePpt.run();
+            MergePptx.run();
+            MergePng.run();
+            MergeBmp.run();
+            MergeTif.run();
+            MergeTiff.run();
+            MergeSvg.run();
+            MergeSvgz.run();
+            MergeEmf.run();
+            MergeEmz.run();
+            MergeRtf.run();
+            MergeTsv.run();
+            MergeTxt.run();
+            MergeVdx.run();
+            MergeVsdm.run();
+            MergeVsdx.run();
+            MergeVssm.run();
+            MergeVssx.run();
+            MergeVstm.run();
+            MergeVstx.run();
+            MergeVsx.run();
+            MergeVtx.run();
+            MergeXlam.run();
+            MergeXls.run();
+            MergeXlsb.run();
+            MergeXlsm.run();
+            MergeXlsx.run();
+            MergeXlt.run();
+            MergeXltm.run();
+            MergeXltx.run();
+            MergeXps.run();
+            MergeZip.run();
+            MergeTar.run();
+            MergeWav.run();
+        // Word
+        MergeWordDocumentsWithoutStartingFromNewPage.run();
+        MergeWordDocumentsWithPredefinedComplianceMode.run();
          //endregion
 
         //region Cross-Join files
@@ -143,49 +150,49 @@ public class RunExamples {
         //endregion
 
         //region Split document
-        //SplitToMultiPageDocuments.run();
-        //SplitToSinglePages.run();
-        //SplitToSinglePagesByRange.run();
-        //SplitToSinglePagesByRangeWithFilter.run();
+        SplitToMultiPageDocuments.run();
+        SplitToSinglePages.run();
+        SplitToSinglePagesByRange.run();
+        SplitToSinglePagesByRangeWithFilter.run();
         //endregion
 
         //region Split text file
-        //SplitToLineRanges.run();
-        //SplitToSeparateLines.run();
+        SplitToLineRanges.run();
+        SplitToSeparateLines.run();
         //endregion
 
         //region Extract document pages
-        //ExtractPagesByNumbers.run();
-        //ExtractPagesByRange.run();
+        ExtractPagesByNumbers.run();
+        ExtractPagesByRange.run();
         //endregion
 
         //region Change orientation of the specific document pages
-        //ChangePageOrientation.run();
+        ChangePageOrientation.run();
         //endregion
 
         //region Rotate document pages
-        //RotatePages.run();
+        RotatePages.run();
         //endregion
 
         //region Swap document pages
-        //SwapPages.run();
+        SwapPages.run();
         //endregion
 
         //region Remove document pages
         // TODO: Implement for some other format than One (which is not supported currently under NET Standard)
-        //RemovePages.run();
+        RemovePages.run();
         //endregion
 
         //region Move page to a new position within document
-        //MovePage.run();
+        MovePage.run();
         //endregion
 
         //region Security - check, add, update, remove document password
 
-        //AddDocumentPassword.run();
-        //UpdateDocumentPassword.run();
-        //CheckDocumentPasswordProtection.run();
-        //RemoveDocumentPassword.run();
+        AddDocumentPassword.run();
+        UpdateDocumentPassword.run();
+        CheckDocumentPasswordProtection.run();
+        RemoveDocumentPassword.run();
 
         //endregion // Security
 
