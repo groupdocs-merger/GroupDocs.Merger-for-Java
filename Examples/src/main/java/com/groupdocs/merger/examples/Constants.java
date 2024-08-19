@@ -173,6 +173,8 @@ public class Constants {
     public static String SAMPLE_PPT = getSampleFilePath("Presentation/sample.ppt");
     public static String SAMPLE_PPT_2 = getSampleFilePath("Presentation/sample.ppt");
 
+    // PPTM
+    public static String SAMPLE_PPTM = getSampleFilePath("Presentation/sample.pptm");
     // PPTX
     public static String SAMPLE_PPTX_2 = getSampleFilePath("Presentation/sample.pptx");
 
@@ -264,6 +266,7 @@ public class Constants {
     // ARCHIVE
     public static String SAMPLE_ZIP = getSampleFilePath("Archive/sample.zip");
     public static String SAMPLE_TAR = getSampleFilePath("Archive/sample.tar");
+    public static String SAMPLE_7Z = getSampleFilePath("Archive/sample.7z");
 
     // AUDIO
     public static String SAMPLE_WAV = getSampleFilePath("Audio/sample.wav");
