@@ -1,0 +1,31 @@
+package com.groupdocs.examples.merger.basic_usage.merge;
+
+import com.groupdocs.examples.merger.utils.FailureRegister;
+import com.groupdocs.merger.Merger;
+import com.groupdocs.merger.domain.options.ImageJoinMode;
+import com.groupdocs.merger.domain.options.ImageJoinOptions;
+
+import java.nio.file.Path;
+
+import static com.groupdocs.examples.merger.utils.FilesUtils.makeOutputPath;
+
+public class MergePng {
+    public static Path run(Path inputFile1, Path inputFile2) {
+        final Path outputPath = makeOutputPath("merged.png");
+        try {
+            final Merger merger = new Merger(inputFile1.toString());
+            try {
+                merger.join(inputFile2.toString(), new ImageJoinOptions(ImageJoinMode.Vertical));
+
+                merger.save(outputPath.toString());
+
+                System.out.println("..sample finished successfully.");
+            } finally {
+                merger.dispose();
+            }
+        } catch (Exception e) {
+            FailureRegister.getInstance().registerFailedSample(e);
+        }
+        return outputPath;
+    }
+}
