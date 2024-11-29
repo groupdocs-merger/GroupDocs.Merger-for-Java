@@ -80,6 +80,8 @@ public class Main {
             SplitTextFile.toLineRanges(SampleFiles.SAMPLE_TXT);
             SplitTextFile.toSeparateLines(SampleFiles.SAMPLE_TXT);
 
+            SwapPages.run(SampleFiles.SAMPLE_PPTX);
+
             MergeWordDocuments.withoutStartingFromNewPage(SampleFiles.SAMPLE_DOC, SampleFiles.SAMPLE_DOC);
             MergeWordDocuments.withPredefinedComplianceMode(SampleFiles.SAMPLE_DOCX, SampleFiles.SAMPLE2_DOCX);
 

@@ -24,7 +24,7 @@ public class MergeXls {
 
                 merger.save(outputPath.toString());
 
-                System.out.println("Sample finished successfully.");
+                System.out.println("..sample finished successfully.");
             } finally {
                 merger.dispose();
             }

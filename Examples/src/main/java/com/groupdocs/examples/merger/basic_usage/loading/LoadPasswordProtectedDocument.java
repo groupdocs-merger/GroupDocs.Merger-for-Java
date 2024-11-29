@@ -16,7 +16,7 @@ public class LoadPasswordProtectedDocument {
 
             Merger merger = new Merger(inputFile.toString(), loadOptions);
 
-            System.out.print("Document loaded successfully.");
+            System.out.println("..sample finished successfully.");
             merger.dispose();
         } catch (Exception e) {
             FailureRegister.getInstance().registerFailedSample(e);
