@@ -3,14 +3,14 @@
 [GroupDocs.Merger for Java](https://products.groupdocs.com/merger/java) allows developers to join multiple documents and manipulate document structure across wide range of [supported document formats](https://docs.groupdocs.com/merger/java/supported-document-formats/). The Merger API also allows to reorder or replace document pages, change page orientation, manage document password and more.  
 
 <p align="center">
-  <a title="Download complete GroupDocs.Merger for Java source code" href="https://github.com/groupdocs-merger/GroupDocs.Merger-for-Java/archive/master.zip"> 
-    <img src="https://camo.githubusercontent.com/11839cd752a2d367f3149c7bee1742b68e4a4d37/68747470733a2f2f7261772e6769746875622e636f6d2f4173706f73654578616d706c65732f6a6176612d6578616d706c65732d64617368626f6172642f6d61737465722f696d616765732f646f776e6c6f61645a69702d427574746f6e2d4c617267652e706e67" data-canonical-src="https://raw.github.com/AsposeExamples/java-examples-dashboard/master/images/downloadZip-Button-Large.png" style="max-width:100%;">
+  <a title="Download complete GroupDocs.Merger examples, plugins and showcase projects for Java" href="https://github.com/groupdocs-merger/GroupDocs.Merger-for-Java/archive/master.zip"> 
+    <img src="https://raw.github.com/AsposeExamples/java-examples-dashboard/master/images/downloadZip-Button-Large.png" />
   </a>
 </p>
 
 Directory | Description
 --------- | -----------
-[Docs](https://github.com/groupdocs-merger/GroupDocs.Merger-for-Docs)  | Product documentation containing the Developer's Guide, Release Notes and more.
+[Docs](https://docs.groupdocs.com/merger/java/)  | Product documentation containing the Developer's Guide, Release Notes and more.
 [Examples](https://github.com/groupdocs-merger/GroupDocs.Merger-for-Java/tree/master/Examples)  | Java examples and sample documents for you to get started quickly. 
 
 ## Merge or Split Documents via Java
